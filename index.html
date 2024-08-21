@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./mediafiles/ipologo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/caa13318f3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Indica Piezo Optics</title>
+</head>
+
+<body>
+    <div id="custom-cursor">
+        <svg viewBox="0 0 120 120">
+            <g>
+                <path id="circlePath" fill="none" stroke="transparent"
+                    d="M 60, 60 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" />
+                <text>
+                    <textPath href="#circlePath">
+                        Scroll to Explore • Scroll to Explore •
+                    </textPath>
+                </text>
+            </g>
+        </svg>
+    </div>
+    <div class="notice">
+        <p>This website is not fully completed! There are so many changes are going to be happened in this.</p>
+    </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <div class="image-wrapper">
+                        <img src="./mediafiles/ipologo.png" alt="IPO Logo">
+                    </div>
+                    <h1>Indica Piezo Optics</h1>
+                </a>
+            </div>
+
+            <ul class="navLinks">
+                <li>
+                    <a href="#home" class="unactive active"><i class="fas fa-house"></i>HOME</a>
+                </li>
+                <li>
+                    <a href="#products" class="unactive"><i class="fab fa-product-hunt"></i>Produtcs</a>
+                </li>
+                <li>
+                    <a href="#services" class="unactive"><i class="fas fa-users-gear"></i>SERVICES</a>
+                </li>
+                <li>
+                    <a href="#about" class="unactive"><i class="fas fa-circle-info"></i>ABOUT</a>
+                </li>
+                <li>
+                    <a href="#contact" class="unactive"><i class="fas fa-phone"></i>CONTACT</a>
+                </li>
+                <li>
+                    <a href="#search" class="unactive" id="searchBtns"><i class="fas fa-magnifying-glass"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="topupBtn-container letUsChat" id="letUsChatBtn">
+            <span><i class="fas fa-comment"></i></span>
+        </div>
+        <div class="topupBtn-container" onclick="topFunction()" id="topupBtn">
+            <span><i class="fas fa-arrow-up"></i></span>
+        </div>
+        <div class="chatBox" id="chatBox">
+            <div class="card-container">
+                <div class="card-header">
+                    <div class="img-avatar"><img src="./mediafiles/ipologo.png" alt="IPO"></div>
+                    <div class="text-chat">
+                        <p>Indica Piezo Optics</p>
+                        <p style="font-size: 13px;">We’ll reply within a few minutes</p>
+                    </div>
+                    <div class="close-btn"><i class="fas fa-x" id="closeChat"></i></div>
+                </div>
+                <div class="card-body">
+                    <div class="messages-container"></div>
+                </div>
+                <div class="message-input">
+                    <form>
+                        <input placeholder="Type your message here" id="user-input" class="message-send" required>
+                        <button type="submit" class="button-send" id="send-btn"><i
+                                class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <section class="section home special-section" id="home">
+            <div class="cont">
+                <video autoplay muted loop>
+                    <source src="./mediafiles/ipoVideo.mp4">
+                </video>
+                <!-- <h1>INDICA PIEZO OPTICS</h1> -->
+            </div>
+        </section>
+        <section class="section" id="products">
+            <h1>Products</h1>
+        </section>
+        <section class="section" id="services">
+            <h1>Services</h1>
+        </section>
+        <section class="section about-us" id="about">
+            <div class="container">
+                <div class="about">
+                    <div class="heading">
+                        <h1>About us</h1>
+                    </div>
+                    <div class="data">
+                        <p>At Indica Piezo Optics, we're pioneering the future of sustainable manufacturing with
+                            innovative
+                            piezo electric tiles and recyclable plastic tiles. Our mission is to revolutionize the
+                            way
+                            industries think about materials and energy.</p>
+                    </div>
+                </div>
+
+                <div class="scroll-indicator">
+                    <div class="scroll-bar"></div>
+                </div>
+
+                <div class="about-content">
+                    <div class="ourcode abtcContainers special-section" id="aboutContent">
+                        <div class="heading">
+                            <h2>Our Story</h2>
+                        </div>
+                        <div class="data">
+                            <p>Founded on the principles of innovation and sustainability, Indica Piezo Optics was
+                                established to meet eco-consciousness, transforming manufacturing with cutting-edge
+                                solutions for a greener future!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="ourvision abtcContainers special-section">
+                        <div class="heading">
+                            <h2>Our Vision</h2>
+                        </div>
+                        <div class="data">
+                            <blockquote>“Transforming Industries, Sustaining Tomorrow”</blockquote>
+                            <p>Our vision is to revolutionize India's landscape with eco-friendly, recyclable
+                                plastic
+                                tiles,
+                                paving the way for a sustainable future and a significant reduction in environmental
+                                footprint.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="aspiritional abtcContainers special-section">
+                        <div class="heading">
+                            <h2>Our Aspirational Objectives:</h2>
+                        </div>
+                        <div class="data">
+                            <ul>
+                                <li>Revolutionize industries with sustainable solutions.</li>
+                                <li>Set new benchmarks for environmental excellence.</li>
+                                <li>Cultivate a culture of creativity, collaboration, and continuous growth.</li>
+                                <li>Inspire industries to embrace sustainable practices.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="coreValue abtcContainers special-section" id="coreValue">
+                        <div class="heading">
+                            <h2>Our Core Values</h2>
+                        </div>
+                        <div class="data">
+                            <ul>
+                                <li>Eco-Excellence: Minimizing waste, maximizing eco-friendliness.</li>
+                                <li>Innovate Fearlessly: Revolutionizing piezo electric and recyclable plastic
+                                    technologies.
+                                </li>
+                                <li>Quality Obsessed: Delivering exceptional products and services, every time.</li>
+                                <li>Customer Centric: Listening, adapting, and exceeding expectations.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="commitment abtcContainers special-section">
+                        <div class="heading">
+                            <h2>Our Commitment</h2>
+                        </div>
+                        <div class="data">
+                            <p>Dedicated to creating a transformative impact on the environment and our customers'
+                                success.
+                                Through pioneering solutions and a customer-centric approach, we strive to:</p>
+                            <ul>
+                                <li>Empower Sustainable Growth</li>
+                                <li>Deliver Exceptional Value</li>
+                                <li>Foster Meaningful Partnerships</li>
+                                <li>Inspire Positive Change</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <p>Join forces with us on a visionary quest to craft a more sustainable, eco-conscious future.
+                    Together,
+                    let's pioneer innovative solutions, drive positive change, and create a lasting impact on the
+                    environment and our communities.</p>
+            </div>
+        </section>
+        <section class="section contactForm" id="contact">
+            <div class="headings">
+                <h2 style="font-size: 40px;">Contact Information</h2>
+            </div>
+            <div class="contactDetails">
+                <div class="leftside">
+                    <p>Indica Piezo Optics</p>
+                    <p class="highlight">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique soluta
+                        illo deserunt.</p>
+                </div>
+                <div class="rightside">
+                    <p>Phone: <span class="highlight"> 9865857483</span></p>
+                    <p>Email: <span class="highlight"> <a
+                                href="mailto:indicapiezooptics@gmail.com">indicapiezooptics@gmail.com</a></span></p>
+                </div>
+            </div>
+            <div class="headings">
+                <h2 style="font-size: 40px;">Consultation Request</h2>
+            </div>
+            <div class="contactFormContainer">
+                <form action="https://formspree.io/f/xjkbrqnr" method="post">
+                    <div class="contactFormRow">
+                        <div class="input-fields">
+                            <input type="text" name="firstname" id="fname" title="Your First Name" required>
+                            <label for="fname">First Name*</label>
+                        </div>
+                        <div class="input-fields">
+                            <input type="text" name="lastname" id="lname" title="Your Last Name" required>
+                            <label for="lname">Last Name*</label>
+                        </div>
+                    </div>
+                    <div class="contactFormRow">
+                        <div class="input-fields">
+                            <input type="email" name="email" id="email" title="Your Email" required>
+                            <label for="email">E-mail*</label>
+                        </div>
+                    </div>
+                    <div class="contactFormRow">
+                        <div class="input-fields">
+                            <input type="text" name="title" id="title" title="Subject" required>
+                            <label for="title">Subject*</label>
+                        </div>
+                    </div>
+                    <div class="contactFormRow">
+                        <div class="input-fields">
+                            <textarea name="message" id="message" cols="30" contactFormRows="10" title="Your Message"
+                                required></textarea>
+                            <label for="message">Message*</label>
+                        </div>
+                    </div>
+                    <div class="contactFormRow">
+                        <div class="input-fields">
+                            <button type="submit" id="submitBtn" class="submitBtn">Submit</button>
+                            <button type="reset" id="resetBtn" class="resetBtn">Reset</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="section searchSection" id="search">
+            <div class="closeBtn">
+                <i class="fas fa-x" id="closeBtn"></i>
+            </div>
+            <label for="searchBox" class="searchBox">
+                <input type="text" name="search" id="searchBox" placeholder="SEARCH">
+                <button class="searchBtn" id="searchBtn"><i class="fas fa-magnifying-glass"></i></button>
+            </label>
+        </section>
+    </main>
+    <footer>
+        <section class="section">
+            <p>&copy; 2024 all copyrights are reserved by Indica Piezo Optics</p>
+        </section>
+    </footer>
+    <script src="./js/chatbot.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
