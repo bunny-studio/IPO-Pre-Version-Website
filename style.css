@@ -836,6 +836,10 @@ main .topupBtn-container:hover {
     text-align: left;
 }
 
+.data .commitmentData{
+    text-align: left;
+}
+
 .data ul{
     list-style: circle;
     text-align: left;
