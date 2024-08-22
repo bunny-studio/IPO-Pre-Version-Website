@@ -105,10 +105,15 @@ aboutContent.addEventListener('scroll', () => {
     scrollBar.style.width = `${scrollPercentage}%`;
 });
 
-const cursorText = document.getElementById("circlePath");
+const cursorText = document.getElementById("textPath");
 const hoverAbout = document.getElementById("aboutContent");
-hoverAbout.addEventListener('dragover', () => {
+hoverAbout.addEventListener('mousemove', () => {
     cursorText.innerHTML = 'Swipe to Explore • Swipe to Explore •';
+    cursorText.style.fontSize = '11.1px';
+});
+hoverAbout.addEventListener('mouseleave', () => {
+    cursorText.innerHTML = 'Scroll to Explore • Scroll to Explore •';
+    cursorText.style.fontSize = '10.4px';
 });
 
 // ----- About Section Ends ----
