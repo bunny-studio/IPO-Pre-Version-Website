@@ -97,12 +97,36 @@ searchBtns.addEventListener('click', () => {
 // ----- About Section Starts ----
 const aboutContent = document.querySelector('.about-content');
 const scrollBar = document.querySelector('.scroll-bar');
+const leftBtn = document.getElementById('leftBtn');
+const rightBtn = document.getElementById('rightBtn');
 
-aboutContent.addEventListener('scroll', () => {
+// Function to update the scrollbar width
+const updateScrollBar = () => {
     const maxScrollLeft = aboutContent.scrollWidth - aboutContent.clientWidth;
     const scrollLeft = aboutContent.scrollLeft;
     const scrollPercentage = (scrollLeft / maxScrollLeft) * 101;
     scrollBar.style.width = `${scrollPercentage}%`;
+};
+
+// Event listener for the scroll event to update the scrollbar width
+aboutContent.addEventListener('scroll', updateScrollBar);
+
+// Click event listener for the left button (previous slide)
+leftBtn.addEventListener('click', () => {
+    const containerWidth = aboutContent.clientWidth;
+    aboutContent.scrollBy({
+        left: -containerWidth,
+        behavior: 'smooth'
+    });
+});
+
+// Click event listener for the right button (next slide)
+rightBtn.addEventListener('click', () => {
+    const containerWidth = aboutContent.clientWidth;
+    aboutContent.scrollBy({
+        left: containerWidth,
+        behavior: 'smooth'
+    });
 });
 
 const cursorText = document.getElementById("textPath");
