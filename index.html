@@ -40,7 +40,7 @@
                     <a href="#home" class="unactive active"><i class="fas fa-house"></i>HOME</a>
                 </li>
                 <li>
-                    <a href="#products" class="unactive"><i class="fab fa-product-hunt"></i>Produtcs</a>
+                    <a href="#products" class="unactive"><i class="fab fa-product-hunt"></i>PRODUCTS</a>
                 </li>
                 <li>
                     <a href="#services" class="unactive"><i class="fas fa-users-gear"></i>SERVICES</a>
@@ -73,35 +73,87 @@
                     <div class="img-avatar"><img src="./mediafiles/ipologo.png" alt="IPO"></div>
                     <div class="text-chat">
                         <p>Indica Piezo Optics</p>
-                        <p style="font-size: 13px;">We’ll reply within a few minutes</p>
+                        <p style="font-size: 13px;">We'll reply within a few minutes</p>
                     </div>
-                    <div class="close-btn"><i class="fas fa-x" id="closeChat"></i></div>
+                    <div class="close-btn"><i class="fas fa-x" id="closeChat" title="Close Chat"></i></div>
                 </div>
                 <div class="card-body">
                     <div class="messages-container"></div>
                 </div>
                 <div class="message-input">
                     <form>
-                        <input placeholder="Type your message here" id="user-input" class="message-send" required>
-                        <button type="submit" class="button-send" id="send-btn"><i
+                        <input placeholder="Type your message here" id="user-input" class="message-send"
+                            title="Enter Your Message" required>
+                        <button type="submit" class="button-send" id="send-btn" title="Send Message"><i
                                 class="fas fa-paper-plane"></i></button>
+                        <button class="clear-chat" id="clear-chat-btn" title="Clear Chat"><i
+                                class="fas fa-trash"></i></button>
                     </form>
                 </div>
             </div>
         </div>
         <section class="section home special-section" id="home">
-            <div class="cont">
+            <div class="contVideo">
                 <video autoplay muted loop>
                     <source src="./mediafiles/ipoVideo.mp4">
                 </video>
-                <!-- <h1>INDICA PIEZO OPTICS</h1> -->
+                <h1>INDICA PIEZO OPTICS</h1>
             </div>
         </section>
-        <section class="section" id="products">
-            <h1>Products</h1>
+        <section class="section products" id="products">
+            <div class="heading">
+                <h1>Products</h1>
+            </div>
+            <div class="notice">
+                <p>These are only demo products. Please, don't consider them as a real
+                    products.</p>
+            </div>
+            <div class="productCardCont">
+                <div class="productLinkPage">
+                    <a href="#products-page">View All</a>
+                </div>
+                <div class="productCards">
+                    <div class="productRow">
+                        <iframe src="https://assets.pinterest.com/ext/embed.html?id=243968504809269356" height="520"
+                            width="236" frameborder="0" scrolling="no"></iframe>
+                        <iframe src="https://assets.pinterest.com/ext/embed.html?id=1031535489646944626" height="520"
+                            width="236" frameborder="0" scrolling="no"></iframe>
+                        <iframe src="https://assets.pinterest.com/ext/embed.html?id=19773685857681784" height="520"
+                            width="236" frameborder="0" scrolling="no"></iframe>
+                        <iframe src="https://assets.pinterest.com/ext/embed.html?id=647885096431297798" height="520"
+                            width="236" frameborder="0" scrolling="no"></iframe>
+                        <iframe src="https://assets.pinterest.com/ext/embed.html?id=632826185171485027" height="520"
+                            width="236" frameborder="0" scrolling="no"></iframe>
+                        <iframe src="https://assets.pinterest.com/ext/embed.html?id=9710955441906650" height="520"
+                            width="236" frameborder="0" scrolling="no"></iframe>
+                        <iframe src="https://assets.pinterest.com/ext/embed.html?id=967218457465434510" height="520"
+                            width="236" frameborder="0" scrolling="no"></iframe>
+                        <iframe src="https://assets.pinterest.com/ext/embed.html?id=11751649020505576" height="520"
+                            width="236" frameborder="0" scrolling="no"></iframe>
+                        <iframe src="https://assets.pinterest.com/ext/embed.html?id=70087337947231126" height="520"
+                            width="236" frameborder="0" scrolling="no"></iframe>
+                        <iframe src="https://assets.pinterest.com/ext/embed.html?id=207728601557713813" height="520"
+                            width="236" frameborder="0" scrolling="no"></iframe>
+                        <iframe src="https://assets.pinterest.com/ext/embed.html?id=7529524370952637" height="520"
+                            width="236" frameborder="0" scrolling="no"></iframe>
+                        <iframe src="https://assets.pinterest.com/ext/embed.html?id=4925880834669465" height="520"
+                            width="236" frameborder="0" scrolling="no"></iframe>
+                        <iframe src="https://assets.pinterest.com/ext/embed.html?id=633387441425285" height="520"
+                            width="236" frameborder="0" scrolling="no"></iframe>
+                        <iframe src="https://assets.pinterest.com/ext/embed.html?id=3307399720134729" height="520"
+                            width="236" frameborder="0" scrolling="no"></iframe>
+                        <iframe src="https://assets.pinterest.com/ext/embed.html?id=623396773450539863" height="520"
+                            width="236" frameborder="0" scrolling="no"></iframe>
+                        <iframe src="https://assets.pinterest.com/ext/embed.html?id=1129066569062007777" height="520"
+                            width="236" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="section" id="services">
-            <h1>Services</h1>
+        <section class="section services" id="services">
+            <div class="heading">
+                <h1>Services</h1>
+            </div>
         </section>
         <section class="section about-us" id="about">
             <div class="container">
@@ -229,8 +281,9 @@
             <div class="contactDetails">
                 <div class="leftside">
                     <p>Indica Piezo Optics</p>
-                    <p class="highlight">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique soluta
-                        illo deserunt.</p>
+                    <p class="highlight"><a href="https://maps.app.goo.gl/qXhsJaQEDmwPpQrp6" target="_blank"
+                            rel="noopener noreferrer">C-17, Ramdev Vatika, Niwaru Road, Jhotwara, Jaipur, Rajasthan,
+                            India, Pincode - 302012</a></p>
                 </div>
                 <div class="rightside">
                     <p>Phone: <span class="highlight"><a href="tel:+91-9256511152">+91-9256511152</a>, <a
@@ -275,8 +328,9 @@
                     </div>
                     <div class="contactFormRow">
                         <div class="input-fields">
-                            <button type="submit" id="submitBtn" class="submitBtn">Submit</button>
-                            <button type="reset" id="resetBtn" class="resetBtn">Reset</button>
+                            <button type="submit" id="submitBtn" class="submitBtn"
+                                title="Click me to submit">Submit</button>
+                            <button type="reset" id="resetBtn" class="resetBtn" title="Click me to clear">Reset</button>
                         </div>
                     </div>
                 </form>

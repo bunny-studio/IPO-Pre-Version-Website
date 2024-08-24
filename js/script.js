@@ -1,6 +1,8 @@
 window.addEventListener('contextmenu', (events) => {
     events.preventDefault();
 }, false)
+window.addEventListener('load', highlightNavLinks);
+window.addEventListener('scroll', highlightNavLinks);
 
 // ----- Cursor Animations Starts ----
 document.addEventListener('mousemove', function (e) {
@@ -58,6 +60,21 @@ function scrollFunction() {
 // -----  Get the button - Go To Top Ends ----
 
 // -----  Highlight Navigation Links Starts ----
+// function highlightNavLinks() {
+//     sections.forEach((sec) => {
+//         let top = window.scrollY;
+//         let offset = sec.offsetTop - top;
+//         let offsetHeight = sec.offsetHeight;
+//         let id = sec.getAttribute("id");
+
+//         if (top >= offset && top < offset + offsetHeight) {
+//             UnactiveNavlink.forEach((links) => {
+//                 links.classList.remove("active");
+//                 document.querySelector(".unactive[href*=" + id + "]").classList.add("active");
+//             });
+//         }
+//     });
+// }
 function highlightNavLinks() {
     sections.forEach((sec) => {
         let top = window.scrollY;
@@ -68,11 +85,12 @@ function highlightNavLinks() {
         if (top >= offset && top < offset + offsetHeight) {
             UnactiveNavlink.forEach((links) => {
                 links.classList.remove("active");
-                document.querySelector(".unactive[href*=" + id + "]").classList.add("active");
             });
+            document.querySelector(".unactive[href*=" + id + "]").classList.add("active");
         }
     });
 }
+
 // -----  Highlight Navigation Links Ends ----
 
 // ----- Search Section Starts ----
@@ -100,7 +118,6 @@ const scrollBar = document.querySelector('.scroll-bar');
 const leftBtn = document.getElementById('leftBtn');
 const rightBtn = document.getElementById('rightBtn');
 
-// Function to update the scrollbar width
 const updateScrollBar = () => {
     const maxScrollLeft = aboutContent.scrollWidth - aboutContent.clientWidth;
     const scrollLeft = aboutContent.scrollLeft;
@@ -108,10 +125,8 @@ const updateScrollBar = () => {
     scrollBar.style.width = `${scrollPercentage}%`;
 };
 
-// Event listener for the scroll event to update the scrollbar width
 aboutContent.addEventListener('scroll', updateScrollBar);
 
-// Click event listener for the left button (previous slide)
 leftBtn.addEventListener('click', () => {
     const containerWidth = aboutContent.clientWidth;
     aboutContent.scrollBy({
@@ -120,7 +135,6 @@ leftBtn.addEventListener('click', () => {
     });
 });
 
-// Click event listener for the right button (next slide)
 rightBtn.addEventListener('click', () => {
     const containerWidth = aboutContent.clientWidth;
     aboutContent.scrollBy({
