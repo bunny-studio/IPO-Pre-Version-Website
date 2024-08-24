@@ -269,7 +269,7 @@ nav .logo a .image-wrapper:hover::before {
 
 .navLinks li a:not(.active) {
     color: var(--text-background-color-4);
-    filter: blur(2px);
+    filter: blur(1px);
 }
 
 /* Navigation CSS Ends */
