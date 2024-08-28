@@ -49,6 +49,7 @@ html {
     --box-shadows-color-1: 5px 10px 25px 5px #50C878;
     --box-shadows-color-2: 5px 10px 25px 5px #E0E0E0;
     --box-shadows-color-3: 0px 0px 25px 10px #50C878;
+    --box-shadow-color-4: 0 10px 20px rgba(0, 0, 0, 0.2);
     --Nunito-fonts: 'Nunito', sans-serif;
     --LibreBaskerville-fonts: "Libre Baskerville", serif;
 }
@@ -89,6 +90,41 @@ body {
 
 .no-scroll {
     overflow: hidden !important;
+}
+
+body::before {
+    content: "";
+    top: 0;
+    left: 1em;
+    position: fixed;
+    width: 100%;
+    height: 10em;
+    z-index: 999;
+    border-left: 5px solid var(--text-background-color-1);
+    transition: 0.3s ease-in-out;
+}
+
+body .social-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    top: 7em;
+    left: 0.3em;
+    position: fixed;
+    font-size: 1.5em;
+    z-index: 2;;
+}
+
+
+body .social-links a {
+    color: var(--text-background-color-1);
+    /* transform: translateY(-12em); */
+}
+
+.social-links a:focus-visible,
+.social-links a:hover {
+    color: var(--hover-color);
 }
 
 /* Cursor CSS Starts */
@@ -800,9 +836,9 @@ main .topupBtn-container:hover {
 .card:hover {
     -webkit-transform: rotate(-5deg) scale(1.1);
     -ms-transform: rotate(-5deg) scale(1.1);
-    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: var(--box-shadow-color-4);
     transform: rotate(-5deg) scale(1.1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow-color-4);
 }
 
 .card__content {
@@ -873,28 +909,27 @@ main .topupBtn-container:hover {
     padding: 5px;
     font-weight: 700;
 }
-
 /* Services CSS End */
 
 /* About US CSS Starts */
+.services,
+.about-us,
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .services,
 .about-us {
     width: 100%;
     height: fit-content !important;
     padding: 60px 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     overflow: hidden;
 }
 
-.services .container,
-.about-us .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.container {
     max-width: 1400px;
     width: 100%;
     height: inherit;
@@ -913,7 +948,6 @@ main .topupBtn-container:hover {
     -ms-overflow-style: none;
     width: 100%;
     margin-bottom: 50px;
-    /* border-radius: 5px; */
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     scrollbar-width: none;
@@ -960,7 +994,6 @@ main .topupBtn-container:hover {
 .scroll-indicator {
     position: relative;
     height: 10px;
-    /* margin: 50px 0 5px; */
     margin: 0 10px;
     border-radius: 5px;
     overflow: hidden;
@@ -1054,7 +1087,6 @@ main .topupBtn-container:hover {
     margin: 20px 0;
     line-height: 50px;
 }
-
 /* About US CSS Ends */
 
 /* Contact Form CSS Starts */
@@ -1191,13 +1223,12 @@ form .contactFormRow {
     color: var(--hover-color-2) !important;
     border: 2px solid var(--hover-color-2) !important;
 }
-
 /* Contact Form CSS Ends */
 /* Main Section CSS Ends */
 
 /* Footer CSS Starts */
 footer {
-    z-index: 99 !important;
+    z-index: 0;
+    justify-content: center;
 }
-
 /* Footer CSS Ends */
