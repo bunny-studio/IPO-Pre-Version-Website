@@ -145,6 +145,7 @@ text {
     width: 100%;
     height: auto;
 }
+
 /* Cursor CSS Ends */
 
 /* Navigation CSS Starts */
@@ -209,7 +210,7 @@ nav .logo a .image-wrapper:hover::before {
     border-color: var(--text-background-color-2);
 }
 
-.logo a:hover{
+.logo a:hover {
     color: var(--hover-color);
 }
 
@@ -241,7 +242,7 @@ nav .logo a .image-wrapper:hover::before {
 
 .navLinks li .unactive:hover {
     color: var(--hover-color);
-    filter:drop-shadow(5px 5px 20px var(--hover-color));
+    filter: drop-shadow(5px 5px 20px var(--hover-color));
 }
 
 .navLinks li a::after {
@@ -296,7 +297,7 @@ main .section {
     background-color: var(--text-background-color-2);
 }
 
-.section .contVideo{
+.section .contVideo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -683,7 +684,8 @@ main .topupBtn-container:hover {
     font-size: 16px;
     transition: .3s all ease;
 }
-.message-input .clear-chat{
+
+.message-input .clear-chat {
     background-color: var(--hover-color-2);
 }
 
@@ -705,13 +707,14 @@ main .topupBtn-container:hover {
     height: auto;
     flex-wrap: wrap;
 }
-.productLinkPage{
+
+.productLinkPage {
     width: 100%;
     margin: 20px 0 40px;
     text-align: right;
 }
 
-.productLinkPage a{
+.productLinkPage a {
     padding: 20px 40px;
     margin-right: 15px;
     border-radius: 10px;
@@ -723,14 +726,14 @@ main .topupBtn-container:hover {
     transition: .3s all ease;
 }
 
-.productLinkPage a:hover{
+.productLinkPage a:hover {
     background-color: var(--hover-color);
     color: var(--text-background-color-1);
     cursor: pointer;
 }
 
 .products .heading,
-.products .productCardCont{
+.products .productCardCont {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -739,22 +742,142 @@ main .topupBtn-container:hover {
     margin-top: 20px;
 }
 
-.productCards{
+.productCards {
     margin: 0 40px;
 }
 
-.products .productCardCont iframe{
+.products .productCardCont iframe {
     margin: 10px;
 }
 
-.searchSection,
-.services {
+.searchSection {
     height: 100vh !important;
 }
 
 /* Products CSS End */
+/* Services CSS Starts */
+.services .cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    min-height: 500px;
+    height: fit-content;
+    /* background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% ); */
+    background: var(--hover-color);
+    border-radius: 10px;
+    margin: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card h1 {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    color: var(--text-background-color-2);
+    fill: var(--hover-color);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card:hover {
+    -webkit-transform: rotate(-5deg) scale(1.1);
+    -ms-transform: rotate(-5deg) scale(1.1);
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: rotate(-5deg) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--icons-hover-color);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    -ms-transform: translate(-50%, -50%) rotate(-45deg);
+    -webkit-box-sizing: border-box;
+    -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card:hover .card__content {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    -ms-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 1;
+}
+
+.card__title {
+    margin: 0;
+    font-size: 24px;
+    color: var(--hover-color);
+    font-weight: 700;
+}
+
+.card__description {
+    margin: 10px 0 0;
+    font-size: 16px;
+    color: var(--text-background-color-4);
+}
+
+.faq-container,
+.card__description .lists {
+    margin: 0 20px;
+}
+
+.card__description .lists li p {
+    line-height: 1.5;
+}
+
+.card:hover h1 {
+    scale: 0;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+
+.faq-container .faqData {
+    margin: 0 40px;
+}
+
+.faq-container .faqData ul{
+    list-style-type: '\2726';
+}
+
+.faqData ul .highlightHeading{
+    color: var(--text-background-color-1);
+    padding: 5px;
+    font-weight: 700;
+}
+
+/* Services CSS End */
 
 /* About US CSS Starts */
+.services,
 .about-us {
     width: 100%;
     height: fit-content !important;
@@ -766,6 +889,7 @@ main .topupBtn-container:hover {
     overflow: hidden;
 }
 
+.services .container,
 .about-us .container {
     display: flex;
     flex-direction: column;
@@ -796,6 +920,7 @@ main .topupBtn-container:hover {
     position: relative;
 }
 
+.services .data,
 .about .data {
     font-size: 1.5em;
     padding: 20px 50px;
@@ -978,7 +1103,7 @@ main .topupBtn-container:hover {
     transition: .3s all ease;
 }
 
-.contactDetails .highlight a:hover{
+.contactDetails .highlight a:hover {
     color: var(--text-background-color-1);
 }
 
