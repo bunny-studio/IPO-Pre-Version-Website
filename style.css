@@ -172,7 +172,7 @@ text {
     display: block;
 }
 
-.special-section {
+.special-section{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -301,12 +301,10 @@ nav .logo a .image-wrapper:hover::before {
 
 .navLinks li a:is(.active) {
     color: var(--hover-color);
-    filter: blur(0px);
 }
 
 .navLinks li a:not(.active) {
     color: var(--text-background-color-4);
-    filter: blur(1px);
 }
 
 /* Navigation CSS Ends */
@@ -329,7 +327,6 @@ main .section {
     align-items: center;
     width: 100%;
     height: fit-content;
-    border: 2px solid var(--hover-color);
     background-color: var(--text-background-color-2);
 }
 
@@ -343,12 +340,18 @@ main .section {
     filter: brightness(.7);
 }
 
+.contVideo video{
+    height: 850px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
 .section h1 {
     font-size: 60px;
     color: var(--hover-color);
 }
 
-.contVideo h1 {
+/* .contVideo h1 {
     position: absolute;
     top: 5%;
     right: 11.5%;
@@ -357,7 +360,7 @@ main .section {
     padding: 20px 40px;
     border-radius: 5px;
     transform: translate(50%, -50%);
-}
+} */
 
 
 /* SearchBox CSS Starts */
@@ -735,13 +738,10 @@ main .topupBtn-container:hover {
 
 /* Products CSS Starts */
 .products {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: auto;
     height: auto;
     flex-wrap: wrap;
+    /* border: 2px solid var(--hover-color); */
 }
 
 .productLinkPage {
@@ -912,6 +912,7 @@ main .topupBtn-container:hover {
 /* Services CSS End */
 
 /* About US CSS Starts */
+.products,
 .services,
 .about-us,
 .container {
@@ -927,6 +928,7 @@ main .topupBtn-container:hover {
     height: fit-content !important;
     padding: 60px 50px;
     overflow: hidden;
+    border: 2px solid var(--hover-color);
 }
 
 .container {
