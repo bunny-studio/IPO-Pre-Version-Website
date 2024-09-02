@@ -95,36 +95,79 @@ body {
 body::before {
     content: "";
     top: 0;
-    left: 1em;
+    left: 2.3em;
     position: fixed;
     width: 100%;
-    height: 10em;
+    height: 10.5em;
     z-index: 999;
     border-left: 5px solid var(--text-background-color-1);
     transition: 0.3s ease-in-out;
 }
 
 body .social-links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    top: 7em;
-    left: 0.3em;
+    top: 19em;
+    left: -4.5em;
     position: fixed;
-    font-size: 1.5em;
-    z-index: 2;;
+    z-index: 20;
+    height: 4em;
+    width: 15em;
+    border: none;
+    border-radius: 40px;
+    background-color: var(--icons-hover-color);
+    cursor: pointer;
+    transform: rotate(-90deg);
 }
 
+.social-links span {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-background-color-2);
+    background-color: var(--text-background-color-1);
+    height: 3em;
+    width: 11.5em;
+    border-radius: 25px;
+    line-height: 55px;
+    font-size: 18px;
+    letter-spacing: 3px;
+    transition: all 0.5s;
+}
+
+.social-links .container {
+    z-index: -1;
+    width: 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-71px);
+    transition: all 0.4s;
+}
+
+.social-links .container svg {
+    padding: 0 10px;
+    transform: rotate(90deg);
+    fill: var(--text-background-color-1)    ;
+}
 
 body .social-links a {
-    color: var(--text-background-color-1);
-    /* transform: translateY(-12em); */
+    fill: var(--text-background-color-1);
 }
 
-.social-links a:focus-visible,
-.social-links a:hover {
-    color: var(--hover-color);
+.social-links a:hover svg{
+    fill: var(--hover-color);
+}
+
+.social-links:hover span {
+    width: 0;
+    color: var(--text-background-color-1);
+}
+
+.social-links:hover .container {
+    z-index: 2;
+    width: 100%;
 }
 
 /* Cursor CSS Starts */
@@ -172,7 +215,7 @@ text {
     display: block;
 }
 
-.special-section{
+.special-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -340,7 +383,7 @@ main .section {
     filter: brightness(.7);
 }
 
-.contVideo video{
+.contVideo video {
     height: 850px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -846,11 +889,12 @@ main .topupBtn-container:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
+    border-radius: 12px;
     padding: 20px;
     box-sizing: border-box;
-    background-color: var(--icons-hover-color);
+    background-color: var(--text-background-color-2);
     opacity: 0;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
     -webkit-transform: translate(-50%, -50%) rotate(-45deg);
@@ -900,15 +944,17 @@ main .topupBtn-container:hover {
     margin: 0 40px;
 }
 
-.faq-container .faqData ul{
+.faq-container .faqData ul {
     list-style-type: '\2726';
 }
 
-.faqData ul .highlightHeading{
+.faqData ul .highlightHeading {
     color: var(--text-background-color-1);
+    text-decoration: 3px underline var(--hover-color);
     padding: 5px;
     font-weight: 700;
 }
+
 /* Services CSS End */
 
 /* About US CSS Starts */
@@ -1089,6 +1135,7 @@ main .topupBtn-container:hover {
     margin: 20px 0;
     line-height: 50px;
 }
+
 /* About US CSS Ends */
 
 /* Contact Form CSS Starts */
@@ -1157,7 +1204,10 @@ form .contactFormRow {
     height: auto;
 }
 
-.input-fields {
+.contactFormRow .input-fields {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     margin: 10px;
     width: 100%;
     position: relative;
@@ -1196,35 +1246,172 @@ form .contactFormRow {
     transition: .3s all ease;
 }
 
-.contactFormRow .input-fields .resetBtn,
+
 .contactFormRow .input-fields .submitBtn {
-    background-color: var(--hover-color);
-    color: var(--text-background-color-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
     outline: none;
-    cursor: pointer;
     border: 2px solid transparent;
-    border-radius: 5px;
+    cursor: pointer;
+    width: 120px;
+    height: 50px;
     margin-left: 20px;
     padding: 10px 20px;
-    transition: .3s all ease;
+    font-size: 18px;
     font-weight: 600;
+    border-radius: 10px;
+    background-color: var(--hover-color);
+    color: var(--text-background-color-3);
+    transition: 0.3s all ease;
 }
 
-.contactFormRow .input-fields .resetBtn {
-    background-color: var(--hover-color-2);
-}
-
-.contactFormRow .input-fields .resetBtn:hover,
-.contactFormRow .input-fields .submitBtn:hover {
-    background-color: var(--text-background-color-3);
-    color: var(--hover-color);
+.input-fields .submitBtn:hover {
+    transition: 0.3s all ease-in-out;
+    box-shadow: 5px 10px 30px var(--text-background-color-1);
     border: 2px solid var(--hover-color);
 }
 
-.contactFormRow .input-fields .resetBtn:hover {
-    color: var(--hover-color-2) !important;
+.input-fields .submitBtn::after,
+.input-fields .submitBtn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--text-background-color-2);
+    transition: all 0.2s ease-in-out;
+}
+
+.input-fields .submitBtn::before {
+    width: 0;
+    height: 80%;
+    border-bottom-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.input-fields .submitBtn:hover::before {
+    width: 100%;
+}
+
+.input-fields .submitBtn::after {
+    width: 80%;
+    height: 0;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+
+.input-fields .submitBtn:hover::after {
+    height: 100%;
+}
+
+.input-fields .resetBtn {
+    background-color: var(--hover-color-2) !important;
+}
+
+.input-fields .resetBtn:hover {
+    color: var(--text-background-color-3) !important;
+    background-color: var(--hover-color-2) !important;
     border: 2px solid var(--hover-color-2) !important;
 }
+
+.input-fields .submitBtn:hover .svg-wrap {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+    z-index: 1;
+}
+
+.input-fields .submitBtn svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contactFormRow .input-fields .submitBtn:active {
+    transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+    from {
+        transform: rotateX(-45deg) translateY(0.1em);
+    }
+
+    to {
+        transform: rotateX(45deg) translateY(-0.1em);
+    }
+}
+
+.submitBtn .span-mother {
+    display: flex;
+    overflow: hidden;
+}
+
+.submitBtn:hover .span-mother {
+    position: absolute;
+}
+
+.submitBtn:hover .span-mother span {
+    transform: translateY(1.5em);
+}
+
+.submitBtn:hover .span-mother svg {
+    visibility: hidden;
+}
+
+.submitBtn .span-mother2 {
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.submitBtn .span-mother2 span {
+    transform: translateY(-1.5em);
+}
+
+.resetBtn:hover .span-mother2 span {
+    transform: translateY(0) !important;
+}
+
+.submitBtn:hover .span-mother2 svg {
+    transform: translateX(1.5em) rotate(45deg) scale(1.2);
+}
+
+.submitBtn .span-mother2 span,
+.submitBtn .span-mother span:nth-child(1) {
+    transition: 0.2s;
+}
+
+.submitBtn .span-mother2 span:nth-child(2),
+.submitBtn .span-mother span:nth-child(2) {
+    transition: 0.3s;
+}
+
+.submitBtn .span-mother2 span:nth-child(3),
+.submitBtn .span-mother span:nth-child(3) {
+    transition: 0.4s;
+}
+
+.submitBtn .span-mother2 span:nth-child(4),
+.submitBtn .span-mother span:nth-child(4) {
+    transition: 0.5s;
+}
+
+.submitBtn .span-mother2 span:nth-child(5),
+.submitBtn .span-mother span:nth-child(5) {
+    transition: 0.6s;
+}
+
+.submitBtn .span-mother2 span:nth-child(6),
+.submitBtn .span-mother span:nth-child(6) {
+    transition: 0.7s;
+}
+
 /* Contact Form CSS Ends */
 /* Main Section CSS Ends */
 
@@ -1233,4 +1420,5 @@ footer {
     z-index: 0;
     justify-content: center;
 }
+
 /* Footer CSS Ends */
