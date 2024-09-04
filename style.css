@@ -1186,7 +1186,8 @@ main .topupBtn-container:hover {
     border-top-right-radius: 0;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    background: var(--text-background-color-3);
+    background: var(--hover-color);
+    color: var(--text-background-color-2);
     transition: .3s all ease;
 }
 
