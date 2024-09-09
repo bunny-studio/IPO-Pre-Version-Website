@@ -113,6 +113,7 @@ body .social-links {
     height: 4em;
     width: 15em;
     border: none;
+    z-index: 999;
     border-radius: 40px;
     background-color: var(--icons-hover-color);
     cursor: pointer;
