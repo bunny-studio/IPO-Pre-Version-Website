@@ -993,67 +993,59 @@ main .topupBtn-container:hover {
 }
 
 .explore-button {
-    display: inline-block;
-    width: auto;
-    font-size: .7em;
-    padding: 10px 40px;
-    background-color: var(--hover-color);
-    color: var(--icons-hover-color);
-    text-align: center;
-    border-radius: 5px;
-    margin: 20px;
     text-decoration: none;
-    border: 2px solid transparent;
+    color: var(--text-background-color-1);
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: fit-content;
+    border: 1px solid var(--text-background-color-1);
+    position: relative;
+    overflow: hidden;
+}
+
+.explore-button a {
+    text-decoration: none;
+    color: var(--text-background-color-1);
+    font-weight: 600;
+    z-index: 10;
+    font-family: var(--Nunito-fonts);
+    position: relative;
     transition: .3s all ease;
 }
 
-.explore-button:hover {
-    border: 2px solid var(--hover-color);
-    background-color: transparent;
+.explore-button:hover a {
     color: var(--hover-color);
 }
 
-.explore-button,
-.marginAdj .explore-button {
-    display: inline-block;
-    width: auto;
-    font-size: .7em;
-    padding: 10px 40px;
-    text-align: center;
-    border-radius: 5px;
-    margin: 20px;
-    text-decoration: none;
-    border: 2px solid transparent;
-    transition: .3s all ease;
-}
 
-.explore-button:hover,
-.marginAdj .explore-button:hover {
-    background-color: transparent;
-}
-
-.explore-button {
+.explore-button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
     background-color: var(--icons-hover-color);
-    color: var(--hover-color);
+    transition: .3s all ease;
 }
 
-.explore-button:hover {
-    border: 2px solid var(--icons-hover-color);
-    color: var(--icons-hover-color);
+.explore-button:hover::after {
+    bottom: 0;
+    border-radius: 0;
 }
 
 .marginAdj h2 {
     color: var(--hover-color);
 }
 
-.marginAdj .explore-button {
-    background-color: var(--hover-color);
+.marginAdj .explore-button:hover a {
     color: var(--icons-hover-color);
 }
 
-.marginAdj .explore-button:hover {
-    border: 2px solid var(--hover-color);
-    color: var(--hover-color);
+.marginAdj .explore-button:hover::after {
+    background-color: var(--text-background-color-1);
 }
 
 .seperator {
