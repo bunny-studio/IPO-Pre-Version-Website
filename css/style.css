@@ -147,16 +147,55 @@ body .social-links {
     justify-content: center;
     align-items: center;
     transform: translateY(-71px);
-    transition: all 0.4s;
+    transition: all 0.4s ease;
+}
+
+.social-links .container a {
+    position: relative;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--hover-color);
+    transition: .3s all ease;
 }
 
 .social-links .container svg {
     padding: 0 10px;
     transform: rotate(90deg);
     fill: var(--text-background-color-1);
+    transition: .3s all ease;
 }
 
-body .social-links a {
+.social-links .container a:hover:after {
+    position: absolute;
+    top: 3.6vw;
+    background-color: var(--icons-hover-color);
+    padding: 10px 40px 10px 10px;
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform: rotate(90deg);
+    transition: .3s all ease;
+}
+
+.social-links .container .linkedin:hover:after {
+    content: "Linkedin";
+    left: -1.4vw;
+}
+
+.social-links .container .instagram:hover:after {
+    content: "Instagram";
+    left: -1.35vw;
+}
+
+.social-links .container .email:hover:after {
+    content: "E-mail";
+    left: -1.3vw;
+}
+
+.social-links a {
     fill: var(--text-background-color-1);
 }
 
@@ -166,7 +205,8 @@ body .social-links a {
 
 .social-links:hover span {
     width: 0;
-    color: var(--text-background-color-1);
+    color: var(--text-background-color-2);
+    visibility: hidden;
 }
 
 .social-links:hover .container {
@@ -848,7 +888,7 @@ main .topupBtn-container:hover {
     justify-content: flex-start;
     align-items: flex-start;
     padding: 0 0 0 20px;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
 .right-section::-webkit-scrollbar {
@@ -873,24 +913,35 @@ main .topupBtn-container:hover {
     margin: 0 2px;
 }
 
+.scrollAble {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory !important;
+}
+
+.scrollAble::-webkit-scrollbar {
+    display: none;
+}
+
 .tile-category {
-    width: 100%;
-    height: auto;
-    margin: 2px;
+    scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 2px;
     cursor: default;
 }
-
 
 .tile-category .logo {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 350px;
+    width: 340px;
     height: 280px;
     border-radius: 2px;
     font-size: 45px;
@@ -899,8 +950,6 @@ main .topupBtn-container:hover {
     background-color: var(--icons-hover-color);
 }
 
-.logo img,
-.logo h3,
 .logo a {
     cursor: pointer;
 }
@@ -1118,13 +1167,13 @@ main .topupBtn-container:hover {
     -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-.card:hover {
+/* .card:hover {
     -webkit-transform: rotate(-5deg) scale(1.1);
     -ms-transform: rotate(-5deg) scale(1.1);
     -webkit-box-shadow: var(--box-shadow-color-4);
     transform: rotate(-5deg) scale(1.1);
     box-shadow: var(--box-shadow-color-4);
-}
+} */
 
 .card__content {
     position: absolute;
@@ -1578,10 +1627,13 @@ main .topupBtn-container:hover {
     transition: .3s all ease;
 }
 
-.sponsorsSlider {
-    max-width: 1400px;
+.sponsersSlider {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: baseline;
+    max-width: 1500px;
     width: 100%;
-    padding: 10px 0;
 }
 
 .logoContainer::-webkit-scrollbar {
@@ -1589,26 +1641,25 @@ main .topupBtn-container:hover {
 }
 
 .logoContainer {
-    max-width: 1400px;
     width: 100%;
     margin: 40px 0;
-    overflow: scroll;
     background-color: var(--text-background-color-5);
     box-shadow: 0 5px 20px 2px var(--text-background-color-4);
     border-radius: 20px;
+    white-space: nowrap;
+    padding: 4vw 2vw;
+    overflow-x: auto;
 }
 
-.logoContainer ul {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0;
-    padding: 20px;
-    width: inherit;
-    height: fit-content;
-    list-style-type: none;
-    animation: slider 30s linear infinite;
-    transform: translateX(0);
+.logoImags {
+    white-space: nowrap;
+    display: inline-block;
+    animation: slider 20s linear infinite;
+}
+
+.logoImags a {
+    display: inline-block;
+    margin: 0 2vw;
 }
 
 @keyframes slider {
@@ -1621,20 +1672,19 @@ main .topupBtn-container:hover {
     }
 }
 
-.logoContainer li {
-    padding: 0 20px;
-}
-
 .logoContainer img {
-    width: 260px;
+    display: inline-block;
+    width: 300px;
     height: auto;
+    object-fit: contain;
+    aspect-ratio: 4/2;
     transition: transform 0.3s ease;
 }
 
 .logoContainer .vgulogo img {
     background-color: #811811;
     padding: 0 10px;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 .logoContainer img:hover {

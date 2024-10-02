@@ -155,3 +155,21 @@ hoverAbout.addEventListener('mouseleave', () => {
 });
 
 // ----- About Section Ends ----
+
+// ----- Product Section Starts ----
+const scrollAble = document.querySelectorAll('.scrollAble');
+const leftBtns = document.querySelectorAll('.scrollLeftBtn');
+const rightBtns = document.querySelectorAll('.scrollRightBtn');
+
+leftBtns.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        scrollAble[Math.floor(index / 2)].scrollBy({ left: -640, behavior: 'smooth' });
+    });
+});
+
+rightBtns.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        scrollAble[Math.floor(index / 2)].scrollBy({ left: 640, behavior: 'smooth' });
+    });
+});
+// ----- Product Section Ends ----

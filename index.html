@@ -14,7 +14,7 @@
     <button class="social-links">
         <span>Share</span>
         <div class="container">
-            <a href="mailto:contactsus.ipo@gmail.com" target="_blank">
+            <a href="mailto:contactsus.ipo@gmail.com" target="_blank" class="email">
                 <svg fill="#000000" height="30" width="30" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 75.294 75.294" xml:space="preserve">
                     <g>
@@ -28,10 +28,9 @@
                     </g>
                 </svg>
             </a>
-            <a href="https://www.instagram.com/indicapiezooptics/" target="_blank">
-                <svg id="instagram" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30" height="30" fill="#33333"
-                    viewBox="0 0 169.063 169.063" xml:space="preserve">
+            <a href="https://www.instagram.com/indicapiezooptics/" target="_blank" class="instagram">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                    y="0px" width="30" height="30" fill="#33333" viewBox="0 0 169.063 169.063" xml:space="preserve">
                     <g>
                         <path
                             d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752  c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407 c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752 c17.455,0,31.656,14.201,31.656,31.655V122.407z" />
@@ -42,7 +41,7 @@
                     </g>
                 </svg>
             </a>
-            <a href="https://www.linkedin.com/in/indica-piezo-optics-5ab699305/" target="_blank">
+            <a href="https://www.linkedin.com/in/indica-piezo-optics-5ab699305/" target="_blank" class="linkedin">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                     width="30" height="30" viewBox="0 0 24 24">
                     <path fill="#33333"
@@ -51,15 +50,6 @@
             </a>
         </div>
     </button>
-
-    <!-- <div class="social-links">
-        <a href="https://m.facebook.com/profile.php?id=61558292579909" target="_blank"><i
-                class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/indicapiezooptics/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/indica-piezo-optics-5ab699305/" target="_blank"><i
-                class="fab fa-linkedin"></i>
-        </a>
-    </div> -->
     <div id="custom-cursor">
         <svg viewBox="0 0 120 120">
             <g>
@@ -160,7 +150,8 @@
                 <div class="container darkBack">
                     <div class="left-section">
                         <h2>Explore Our Wall Tiles</h2>
-                        <p>IPO brings to you premium wall tiles that are detailed with perfection. Each tile is made
+                        <p style="color: #ececec;">IPO brings to you premium wall tiles that are detailed with
+                            perfection. Each tile is made
                             using state
                             of
                             the art technology making them strong, durable & easy to maintain.</p>
@@ -169,18 +160,20 @@
                         </div>
                         <a href="products.html" class="explore-button">EXPLORE ALL</a>
                     </div>
+
                     <div class="seperator">
                         <div class="scrollBtns upperBtns">
-                            <button>1</button>
-                            <button>2</button>
+                            <button class="scrollLeftBtn">1</button>
+                            <button class="scrollRightBtn">2</button>
                         </div>
                         <hr class="divider">
                         <div class="scrollBtns upperBtns">
-                            <button><i class="fas fa-angle-right"></i></button>
-                            <button><i class="fas fa-angle-left"></i></button>
+                            <button class="scrollRightBtn"><i class="fas fa-angle-right"></i></button>
+                            <button class="scrollLeftBtn"><i class="fas fa-angle-left"></i></button>
                         </div>
                     </div>
-                    <div class="right-section">
+
+                    <div class="right-section scrollAble" style="margin-left: 20px;">
                         <div class="tile-category">
                             <div class="logo">
                                 <img src="./mediafiles/image/bathroom.png" alt="">
@@ -220,7 +213,7 @@
                     </div>
                 </div>
                 <div class="container lightBack">
-                    <div class="right-section marginAdjL">
+                    <div class="right-section scrollAble" style="margin-right: 20px;">
                         <div class="tile-category">
                             <div class="logo">
                                 <img src="./mediafiles/image/bathroom.png" alt="">
@@ -260,18 +253,19 @@
                     </div>
                     <div class="seperator">
                         <div class="scrollBtns">
-                            <button>1</button>
-                            <button>2</button>
+                            <button class="scrollLeftBtn">1</button>
+                            <button class="scrollRightBtn">2</button>
                         </div>
                         <hr class="divider">
                         <div class="scrollBtns">
-                            <button><i class="fas fa-angle-right"></i></button>
-                            <button><i class="fas fa-angle-left"></i></button>
+                            <button class="scrollRightBtn"><i class="fas fa-angle-right"></i></button>
+                            <button class="scrollLeftBtn"><i class="fas fa-angle-left"></i></button>
                         </div>
                     </div>
                     <div class="left-section marginAdj">
                         <h2>Explore Our Floor Tiles</h2>
-                        <p>IPO range of luxurious floor tiles integrates technological expertise with exquisite designs.
+                        <p>IPO range of luxurious floor tiles integrates technological expertise with exquisite
+                            designs.
                             Each tile is crafted using ultra-modern technology to ensure high quality.</p>
                         <div class="tile-image">
                             <img src="./mediafiles/image/floortiles.jpg" alt="Tile Image 1">
@@ -575,7 +569,7 @@
                         <div class="infoDiv">
                             <div class="nameDiv">
                                 <p class="name">Simran Tanwar</p>
-                                <p class="role">CEOO & Co-Founder</p>
+                                <p class="role">COO & Co-Founder</p>
                             </div>
                             <div class="socialDiv">
                                 <a href="https://www.linkedin.com/in/simran-tanwar-277685286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
@@ -608,16 +602,6 @@
                                 <p class="role">Business Analyst</p>
                             </div>
                             <div class="socialDiv">
-                                <a href="https://www.facebook.com/share/PCxnAStvkj8yKPkk/?mibextid=qi2Omg"
-                                    target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        version="1.0" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50"
-                                        class="socials linkdin">
-                                        <path
-                                            d="M40,0H10C4.486,0,0,4.486,0,10v30c0,5.514,4.486,10,10,10h30c5.514,0,10-4.486,10-10V10C50,4.486,45.514,0,40,0z M39,17h-3 c-2.145,0-3,0.504-3,2v3h6l-1,6h-5v20h-7V28h-3v-6h3v-3c0-4.677,1.581-8,7-8c2.902,0,6,1,6,1V17z">
-                                        </path>
-                                    </svg>
-                                </a>
                                 <a href="https://www.linkedin.com/in/aayush-kumar-kumawat-a9719a290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                                     target="_blank">
                                     <svg viewBox="0 0 448 512" class="socials linkdin">
@@ -648,16 +632,6 @@
                                 <p class="role">Chief Technology Officer</p>
                             </div>
                             <div class="socialDiv">
-                                <a href="https://www.facebook.com/share/9q2y1anaBfW7JJka/?mibextid=qi2Omg"
-                                    target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        version="1.0" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50"
-                                        class="socials linkdin">
-                                        <path
-                                            d="M40,0H10C4.486,0,0,4.486,0,10v30c0,5.514,4.486,10,10,10h30c5.514,0,10-4.486,10-10V10C50,4.486,45.514,0,40,0z M39,17h-3 c-2.145,0-3,0.504-3,2v3h6l-1,6h-5v20h-7V28h-3v-6h3v-3c0-4.677,1.581-8,7-8c2.902,0,6,1,6,1V17z">
-                                        </path>
-                                    </svg>
-                                </a>
                                 <a href="https://www.linkedin.com/in/rahul-dadheech-b378ba302?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                                     target="_blank">
                                     <svg viewBox="0 0 448 512" class="socials linkdin">
@@ -682,68 +656,66 @@
                         <h1>Our Sponsers</h1>
                     </div>
                     <div class="logoContainer">
-                        <ul>
-                            <li>
-                                <a href="https://www.startupindia.gov.in/" target="_blank">
-                                    <img src="./mediafiles/sponsers/startupindia.png" alt="StartUpIndia">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://dpiit.gov.in/" target="_blank">
-                                    <img src="./mediafiles/sponsers/dpiit_1.png" alt="DPIIT">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://talent.istart.rajasthan.gov.in/" target="_blank">
-                                    <img src="./mediafiles/sponsers/istart-logo.png" alt="istart">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.sidbi.in/en/" target="_blank">
-                                    <img src="./mediafiles/sponsers/sidbi_1.png" alt="SIDBI">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://acicvgu.com/" target="_blank">
-                                    <img src="./mediafiles/sponsers/acic_1.png" alt="ACIC">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://vgu.ac.in/" target="_blank" class="vgulogo">
-                                    <img src="./mediafiles/sponsers/vgu.png" alt="VGU">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.startupindia.gov.in/" target="_blank">
-                                    <img src="./mediafiles/sponsers/startupindia.png" alt="StartUpIndia">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://dpiit.gov.in/" target="_blank">
-                                    <img src="./mediafiles/sponsers/dpiit_1.png" alt="DPIIT">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://talent.istart.rajasthan.gov.in/" target="_blank">
-                                    <img src="./mediafiles/sponsers/istart-logo.png" alt="istart">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.sidbi.in/en/" target="_blank">
-                                    <img src="./mediafiles/sponsers/sidbi_1.png" alt="SIDBI">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://acicvgu.com/" target="_blank">
-                                    <img src="./mediafiles/sponsers/acic_1.png" alt="ACIC">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://vgu.ac.in/" target="_blank" class="vgulogo">
-                                    <img src="./mediafiles/sponsers/vgu.png" alt="VGU">
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="logoImags">
+                            <a href="https://www.startupindia.gov.in/" target="_blank">
+                                <img src="./mediafiles/sponsers/startupindia.png" alt="StartUpIndia">
+                            </a>
+                            <a href="https://dpiit.gov.in/" target="_blank">
+                                <img src="./mediafiles/sponsers/dpiit_1.png" alt="DPIIT">
+                            </a>
+                            <a href="https://talent.istart.rajasthan.gov.in/" target="_blank">
+                                <img src="./mediafiles/sponsers/istart-logo.png" alt="istart">
+                            </a>
+                            <a href="https://www.sidbi.in/en/" target="_blank">
+                                <img src="./mediafiles/sponsers/sidbi_1.png" alt="SIDBI">
+                            </a>
+                            <a href="https://acicvgu.com/" target="_blank">
+                                <img src="./mediafiles/sponsers/acic_1.png" alt="ACIC">
+                            </a>
+                            <a href="https://vgu.ac.in/" target="_blank" class="vgulogo">
+                                <img src="./mediafiles/sponsers/vgu.png" alt="VGU">
+                            </a>
+                        </div>
+                        <div class="logoImags">
+                            <a href="https://www.startupindia.gov.in/" target="_blank">
+                                <img src="./mediafiles/sponsers/startupindia.png" alt="StartUpIndia">
+                            </a>
+                            <a href="https://dpiit.gov.in/" target="_blank">
+                                <img src="./mediafiles/sponsers/dpiit_1.png" alt="DPIIT">
+                            </a>
+                            <a href="https://talent.istart.rajasthan.gov.in/" target="_blank">
+                                <img src="./mediafiles/sponsers/istart-logo.png" alt="istart">
+                            </a>
+                            <a href="https://www.sidbi.in/en/" target="_blank">
+                                <img src="./mediafiles/sponsers/sidbi_1.png" alt="SIDBI">
+                            </a>
+                            <a href="https://acicvgu.com/" target="_blank">
+                                <img src="./mediafiles/sponsers/acic_1.png" alt="ACIC">
+                            </a>
+                            <a href="https://vgu.ac.in/" target="_blank" class="vgulogo">
+                                <img src="./mediafiles/sponsers/vgu.png" alt="VGU">
+                            </a>
+                        </div>
+                        <div class="logoImags">
+                            <a href="https://www.startupindia.gov.in/" target="_blank">
+                                <img src="./mediafiles/sponsers/startupindia.png" alt="StartUpIndia">
+                            </a>
+                            <a href="https://dpiit.gov.in/" target="_blank">
+                                <img src="./mediafiles/sponsers/dpiit_1.png" alt="DPIIT">
+                            </a>
+                            <a href="https://talent.istart.rajasthan.gov.in/" target="_blank">
+                                <img src="./mediafiles/sponsers/istart-logo.png" alt="istart">
+                            </a>
+                            <a href="https://www.sidbi.in/en/" target="_blank">
+                                <img src="./mediafiles/sponsers/sidbi_1.png" alt="SIDBI">
+                            </a>
+                            <a href="https://acicvgu.com/" target="_blank">
+                                <img src="./mediafiles/sponsers/acic_1.png" alt="ACIC">
+                            </a>
+                            <a href="https://vgu.ac.in/" target="_blank" class="vgulogo">
+                                <img src="./mediafiles/sponsers/vgu.png" alt="VGU">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

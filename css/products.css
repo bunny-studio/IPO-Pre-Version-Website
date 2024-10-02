@@ -373,9 +373,11 @@ main {
     margin-bottom: 10px;
 }
 
-.tile p {
+.tile p:nth-child(3),
+.tile p:nth-child(4) {
     margin: 5px 0;
     color: #777;
+    cursor: default;
 }
 
 p:hover {
@@ -383,7 +385,7 @@ p:hover {
 }
 
 .pd_name {
-    color: #000000;
+    color: var(--text-background-color-3);
     font-size: 20px;
     text-decoration: none;
 }
