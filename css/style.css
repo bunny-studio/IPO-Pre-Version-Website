@@ -993,23 +993,24 @@ main .topupBtn-container:hover {
 }
 
 .explore-button {
-    text-decoration: none;
     color: var(--text-background-color-1);
-    padding: 10px 20px;
+    padding: 10px 0;
     margin-top: 20px;
     border-radius: 5px;
+    position: relative;
     width: fit-content;
     border: 1px solid var(--text-background-color-1);
-    position: relative;
-    overflow: hidden;
+    overflow: hidden !important;
+    cursor: pointer;
 }
 
 .explore-button a {
     text-decoration: none;
+    padding: 10px 20px;
+    width: fit-content;
     color: var(--text-background-color-1);
     font-weight: 600;
     z-index: 10;
-    font-family: var(--Nunito-fonts);
     position: relative;
     transition: .3s all ease;
 }
