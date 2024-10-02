@@ -65,23 +65,25 @@ html {
     width: 100%;
     overflow: hidden;
     width: 100%;
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
-/* .notice p {
-    animation: moving 20s linear infinite;
-    transform: translateX(100%);
+.notice p {
+    display: inline-block;
+    margin: 0 10px;
+    animation: moving 15s linear infinite;
+    color: var(--icons-hover-color);
 }
 
 @keyframes moving {
     from {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
 
     to {
         transform: translateX(-100%);
     }
-} */
+}
 
 body {
     width: 100%;

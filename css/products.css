@@ -56,6 +56,36 @@ html {
     --LibreBaskerville-fonts: "Libre Baskerville", serif;
 }
 
+.notice {
+    background-color: var(--hover-color-2);
+    text-align: left;
+    font-size: 1.5em;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.notice p {
+    display: inline-block;
+    margin: 0 10px;
+    animation: moving 15s linear infinite;
+    color: var(--icons-hover-color);
+}
+
+@keyframes moving {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
 
 body {
     width: 100%;
