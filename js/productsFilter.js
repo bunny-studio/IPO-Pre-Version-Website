@@ -4,11 +4,9 @@
             const sizeFilters = document.querySelectorAll('.filter-size input[type="checkbox"]');
             const finishFilters = document.querySelectorAll('.filter-finish input[type="checkbox"]');
 
-
             const selectedCategories = Array.from(categoryFilters).filter(checkbox => checkbox.checked).map(checkbox => checkbox.nextSibling.textContent.trim());
             const selectedSizes = Array.from(sizeFilters).filter(checkbox => checkbox.checked).map(checkbox => checkbox.nextSibling.textContent.trim());
             const selectedFinishes = Array.from(finishFilters).filter(checkbox => checkbox.checked).map(checkbox => checkbox.nextSibling.textContent.trim());
-
 
             const tiles = document.querySelectorAll('.tile');
             let anyTileVisible = false;
@@ -46,12 +44,10 @@
             const messageText = document.getElementById('noResultsText');
 
             messageText.textContent = message;
-
             messageElement.style.display = 'block';
         }
 
         function hideMessage() {
-
             const messageElement = document.querySelector('.no-results-message');
             if (messageElement) {
                 messageElement.style.display = 'none';

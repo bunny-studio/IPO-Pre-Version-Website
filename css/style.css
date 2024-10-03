@@ -656,6 +656,7 @@ main .topupBtn-container:hover {
 
 .chatBox {
     display: none;
+    z-index: 99;
 }
 
 .card-container {
