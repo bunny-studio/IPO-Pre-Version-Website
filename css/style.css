@@ -88,6 +88,7 @@ body {
     width: 100%;
     height: auto;
     overflow-x: hidden;
+    position: relative;
     color: var(--text-background-color-2);
     background-color: var(--text-background-color-1);
 }
@@ -125,18 +126,24 @@ body .social-links {
 
 .social-links span {
     z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    place-content: center;
     color: var(--text-background-color-2);
     background-color: var(--text-background-color-1);
-    height: 3em;
-    width: 11.5em;
+    height: 100%;
+    width: 100%;
     border-radius: 25px;
-    line-height: 55px;
     font-size: 18px;
-    letter-spacing: 3px;
-    transition: all 0.5s;
+    transition: all 0.3s ease;
+}
+
+.social-links:hover span {
+    width: 0;
+    color: var(--text-background-color-2);
+    transform: translateY(-100px);
 }
 
 .social-links .container {
@@ -147,8 +154,14 @@ body .social-links {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    transform: translateY(-71px);
+    transform: translateY(-70px);
     transition: all 0.4s ease;
+}
+
+.social-links:hover .container {
+    z-index: 2;
+    transform: translateY(-18px);
+    width: 100%;
 }
 
 .social-links .container a {
@@ -204,17 +217,6 @@ body .social-links {
     fill: var(--hover-color);
 }
 
-.social-links:hover span {
-    width: 0;
-    color: var(--text-background-color-2);
-    visibility: hidden;
-}
-
-.social-links:hover .container {
-    z-index: 2;
-    width: 100%;
-}
-
 /* Cursor CSS Starts */
 #custom-cursor {
     display: block;
@@ -264,13 +266,19 @@ text {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: url("./icons/down-arrow.svg") 16 16, auto;
+    cursor: url("/mediafiles/icons/down-arrow.svg") 16 16, auto;
     position: relative;
     width: 100%;
     height: auto;
 }
 
 /* Cursor CSS Ends */
+.menu-bar,
+#click {
+    display: none;
+    font-size: 30px;
+}
+
 
 /* Navigation CSS Starts */
 footer,
@@ -353,7 +361,7 @@ nav .logo a .image-wrapper:hover::before {
 .navLinks li a {
     text-decoration: none;
     color: var(--text-background-color-2);
-    font-size: 16px;
+    font-size: 16px !important;
     font-weight: 600;
     position: relative;
     margin-right: 40px;
@@ -394,6 +402,8 @@ nav .logo a .image-wrapper:hover::before {
 .navLinks li a:not(.active) {
     color: var(--text-background-color-4);
 }
+
+/* Navigation CSS Ends */
 
 /* Navigation CSS Ends */
 
@@ -524,7 +534,7 @@ main .topupBtn-container {
     padding: 20px 25px;
     border-radius: 120px;
     position: fixed;
-    z-index: 1;
+    z-index: 99;
     transition: .3s all ease-in-out;
     cursor: pointer;
 }
@@ -608,219 +618,9 @@ main .topupBtn-container:hover {
 
 /* TopBtn & Let's Chat Btn CSS Ends*/
 
-/* ChatBOT CSS Start*/
-#contact-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--icons-hover-color);
-    border-radius: 10px;
-    width: 100%;
-}
-
-.row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 10px;
-}
-
-#contact-form input,
-#contact-form textarea {
-    padding: 5px 5px;
-    outline: none;
-    border: 2px solid transparent;
-    font-size: 15px;
-    color: var(--text-background-color-1);
-    border: 2px solid var(--text-background-color-2);
-    border-radius: 5px;
-    background-color: var(--text-background-color-2);
-}
-
-#contact-form button {
-    background-color: var(--icons-hover-color);
-    color: var(--hover-color);
-    border: none;
-    outline: none;
-    padding: 10px 30px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: .3s all ease;
-}
-
-#contact-form button:hover {
-    background-color: var(--text-background-color-3);
-}
-
-.chatBox {
-    display: none;
-    z-index: 99;
-}
-
-.card-container {
-    display: flex;
-    flex-direction: column;
-    width: 380px;
-    bottom: 0;
-    right: -1em;
-    position: fixed;
-    z-index: 2;
-    padding: 15px;
-    margin: 20px;
-    border-radius: 10px;
-    background-color: var(--text-background-color-1);
-}
-
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--text-background-color-2);
-}
-
-.card-header .img-avatar {
-    width: auto;
-    height: auto;
-    position: relative;
-    background-color: var(--text-background-color-3);
-    border-radius: 50%;
-}
-
-.card-header .img-avatar::after {
-    content: "";
-    bottom: 5px;
-    right: 5px;
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: var(--hover-color);
-}
-
-.card-header .text-chat {
-    color: var(--icons-hover-color);
-    font-size: 20px;
-}
-
-.card-header .close-btn {
-    cursor: pointer;
-    font-size: 20px;
-    transition: .3s all ease;
-}
-
-.card-header .close-btn:hover {
-    color: var(--hover-color);
-}
-
-.card-body {
-    flex: 1;
-    overflow-y: auto;
-}
-
-.messages-container {
-    padding: 15px;
-    overflow-y: scroll;
-    width: auto;
-    height: 500px;
-}
-
-.time {
-    width: auto;
-    height: auto;
-    margin: 20px 0;
-    text-align: center;
-}
-
-.time span {
-    font-size: 13px;
-    background-color: var(--text-background-color-4);
-    padding: 5px;
-    border-radius: 20px;
-}
-
-.message-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 5px;
-    border-radius: 10px;
-    width: 100%;
-}
-
-.message-box.left {
-    background-color: var(--hover-color);
-    color: var(--icons-hover-color);
-    font-size: 18px;
-}
-
-.message-box.right {
-    background-color: var(--text-background-color-2);
-    color: var(--text-background-color-3);
-    font-size: 18px;
-    width: fit-content;
-}
-
-.message-box.right p {
-    width: fit-content;
-}
-
-.message-input {
-    padding: 5px;
-    border-top: 1px solid var(--text-background-color-2);
-}
-
-.message-input,
-.message-input form {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row !important;
-    width: 100%;
-}
-
-.message-input .message-send {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    resize: none;
-    outline: none;
-    font-size: 18px;
-}
-
-.message-input .clear-chat,
-.message-input .button-send {
-    background-color: var(--hover-color);
-    color: var(--text-background-color-2);
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    width: auto;
-    margin-left: 10px;
-    border-radius: 10px;
-    font-size: 16px;
-    transition: .3s all ease;
-}
-
-.message-input .clear-chat {
-    background-color: var(--hover-color-2);
-}
-
-.message-input .clear-chat:hover,
-.message-input .button-send:hover {
-    background-color: var(--text-background-color-2);
-    color: var(--hover-color);
-}
-
-/* ChatBot CSS End */
-
 /* Products CSS Starts */
 .products {
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .mainContainer {
@@ -845,6 +645,8 @@ main .topupBtn-container:hover {
 .lightBack {
     background-color: var(--text-background-color-5);
 }
+
+
 
 .mainContainer .container {
     display: flex;
@@ -967,9 +769,6 @@ main .topupBtn-container:hover {
     color: var(--text-background-color-1);
 }
 
-.tile-category .logo h3:hover {
-    color: var(--hover-color);
-}
 
 .tile-category a {
     color: var(--hover-color);
@@ -1077,6 +876,10 @@ main .topupBtn-container:hover {
     background-color: var(--text-background-color-4);
 }
 
+.lightBack .seperator .scrollBtns button:hover {
+    color: var(--text-background-color-2);
+}
+
 .upperBtns button:hover {
     color: var(--icons-hover-color);
     background-color: var(--text-background-color-1);
@@ -1105,12 +908,19 @@ main .topupBtn-container:hover {
     height: fit-content;
 }
 
+.services .heading {
+    width: inherit;
+}
+
+.heading .span {
+    display: none;
+}
+
 .card {
     position: relative;
     width: 300px;
     min-height: 500px;
     height: fit-content;
-    /* background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% ); */
     background: var(--hover-color);
     border-radius: 10px;
     margin: 40px 20px;
@@ -1162,13 +972,9 @@ main .topupBtn-container:hover {
     -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-/* .card:hover {
-    -webkit-transform: rotate(-5deg) scale(1.1);
-    -ms-transform: rotate(-5deg) scale(1.1);
-    -webkit-box-shadow: var(--box-shadow-color-4);
-    transform: rotate(-5deg) scale(1.1);
-    box-shadow: var(--box-shadow-color-4);
-} */
+.overflow {
+    overflow-y: scroll;
+}
 
 .card__content {
     position: absolute;
@@ -1185,7 +991,6 @@ main .topupBtn-container:hover {
     box-sizing: border-box;
     background-color: var(--text-background-color-2);
     opacity: 0;
-    overflow-y: scroll;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
     -webkit-transform: translate(-50%, -50%) rotate(-45deg);
     -ms-transform: translate(-50%, -50%) rotate(-45deg);
@@ -1365,7 +1170,7 @@ main .topupBtn-container:hover {
     box-sizing: border-box;
     color: var(--hover-color);
     background-color: var(--text-background-color-1);
-    cursor: url("./icons/right-arrow.svg") 16 16, auto !important;
+    cursor: url("/mediafiles/icons/right-arrow.svg") 16 16, auto !important;
 }
 
 .abtcContainers .content-text {

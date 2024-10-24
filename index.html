@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./mediafiles/ipologo.png" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/caa13318f3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css//media-query.css">
     <title>Home | Indica Piezo Optics</title>
 </head>
 
 <body>
     <button class="social-links">
-        <span>Connect with us</span>
+        <span class="socialText">
+            Connect with us
+        </span>
         <div class="container">
             <a href="mailto:contactsus.ipo@gmail.com" target="_blank" class="email">
                 <svg fill="#000000" height="30" width="30" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
@@ -74,84 +77,46 @@
                 </a>
             </div>
 
-            <ul class="navLinks">
+            <input type="checkbox" id="click">
+            <label for="click" class="menu-bar">
+                <i class="fas fa-bars-staggered" id="navBtn" aria-hidden="true" style="display: block;"></i>
+                <i class="fas fa-xmark" id="navBtnClose" aria-hidden="true" style="display: none;"></i>
+            </label>
+
+            <ul class="navLinks" id="sideMenu">
                 <li>
-                    <a href="#home" class="unactive active"><i class="fas fa-house"></i>HOME</a>
+                    <a href="#home" class="unactive active"><i class="far fa-house"></i>HOME</a>
                 </li>
                 <li>
                     <a href="#products" class="unactive"><i class="fab fa-product-hunt"></i>PRODUCTS</a>
                 </li>
                 <li>
-                    <a href="#services" class="unactive"><i class="fas fa-users-gear"></i>SERVICES</a>
+                    <a href="#services" class="unactive"><i class="far fa-users-gear"></i>SERVICES</a>
                 </li>
                 <li>
-                    <a href="#about" class="unactive"><i class="fas fa-circle-info"></i>ABOUT</a>
+                    <a href="#about" class="unactive"><i class="far fa-circle-info"></i>ABOUT</a>
                 </li>
                 <li>
-                    <a href="#contact" class="unactive"><i class="fas fa-phone"></i>CONTACT</a>
-                </li>
-                <li>
-                    <a href="#search" class="unactive" id="searchBtns"><i class="fas fa-magnifying-glass"></i></a>
+                    <a href="#contact" class="unactive"><i class="far fa-phone"></i>CONTACT</a>
                 </li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <!-- <div class="notice">
-            <p>This website is not fully completed! There are so many changes are going to be happened in this.</p>
-            <p>This website is not fully completed! There are so many changes are going to be happened in this.</p>
-            <p>This website is not fully completed! There are so many changes are going to be happened in this.</p>
-        </div> -->
-        <div class="topupBtn-container letUsChat" id="letUsChatBtn">
-            <span><i class="fas fa-comment"></i></span>
-        </div>
         <div class="topupBtn-container" onclick="topFunction()" id="topupBtn">
             <span><i class="fas fa-arrow-up"></i></span>
-        </div>
-        <div class="chatBox" id="chatBox">
-            <div class="card-container">
-                <div class="card-header">
-                    <div class="img-avatar"><img src="./mediafiles/ipologo.png" alt="IPO"></div>
-                    <div class="text-chat">
-                        <p>Indica Piezo Optics</p>
-                        <p style="font-size: 13px;">We'll reply within a few minutes</p>
-                    </div>
-                    <div class="close-btn"><i class="fas fa-x" id="closeChat" title="Close Chat"></i></div>
-                </div>
-                <div class="card-body">
-                    <div class="messages-container"></div>
-                </div>
-                <div class="message-input">
-                    <form>
-                        <input placeholder="Type your message here" id="user-input" class="message-send"
-                            title="Enter Your Message" required>
-                        <button type="submit" class="button-send" id="send-btn" title="Send Message"><i
-                                class="fas fa-paper-plane"></i></button>
-                        <button class="clear-chat" id="clear-chat-btn" title="Clear Chat"><i
-                                class="fas fa-trash"></i></button>
-                    </form>
-                </div>
-            </div>
         </div>
         <section class="section home special-section" id="home">
             <div class="contVideo">
                 <video autoplay muted loop>
                     <source src="./mediafiles/ipoVideo.mp4">
                 </video>
-                <!-- <h1>INDICA PIEZO OPTICS</h1> -->
             </div>
         </section>
         <section class="section products" id="products">
             <div class="mainContainer">
                 <h1>Products</h1>
-                <div class="notice">
-                    <p>This section of our website is not fully completed! There are so many changes are going to be
-                        happened in this.</p>
-                    <p>This section of our website is not fully completed! There are so many changes are going to be
-                        happened in this.</p>
-                    <p>This section of our website is not fully completed! There are so many changes are going to be
-                        happened in this.</p>
-                </div>
                 <div class="container darkBack">
                     <div class="left-section">
                         <h2>Explore Our Wall Tiles</h2>
@@ -164,109 +129,112 @@
                             <img src="./mediafiles/image/walltiles.jpg" alt="Tile Image 1">
                         </div>
                         <div class="explore-button">
-                            <a href="products.html">EXPLORE ALL</a>
+                            <a href="wall-products.html?category=all-tiles">Explore All</a>
                         </div>
                     </div>
+                    <div class="combined">
+                        <div class="seperator">
+                            <div class="scrollBtns upperBtns">
+                                <button class="scrollLeftBtn">1</button>
+                                <button class="scrollRightBtn">2</button>
+                            </div>
+                            <hr class="divider">
+                            <div class="scrollBtns upperBtns">
+                                <button class="scrollRightBtn"><i class="fas fa-angle-right"></i></button>
+                                <button class="scrollLeftBtn"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                        </div>
 
-                    <div class="seperator">
-                        <div class="scrollBtns upperBtns">
-                            <button class="scrollLeftBtn">1</button>
-                            <button class="scrollRightBtn">2</button>
-                        </div>
-                        <hr class="divider">
-                        <div class="scrollBtns upperBtns">
-                            <button class="scrollRightBtn"><i class="fas fa-angle-right"></i></button>
-                            <button class="scrollLeftBtn"><i class="fas fa-angle-left"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="right-section scrollAble" style="margin-left: 20px;">
-                        <div class="tile-category">
-                            <div class="logo">
-                                <img src="./mediafiles/image/bathroom.png" alt="">
-                                <h3>Bathroom Wall Tiles</h3>
-                                <a href="404.html">Explore Now</a>
+                        <div class="right-section scrollAble" style="margin-left: 20px;">
+                            <div class="tile-category">
+                                <div class="logo">
+                                    <img src="./mediafiles/image/bathroom.png" alt="">
+                                    <h3>Bathroom Wall Tiles</h3>
+                                    <a href="wall-products.html?category=bathroom-tiles">Explore Now</a>
+                                </div>
+                                <div class="logo">
+                                    <img src="./mediafiles/image/kitchen.png" alt="">
+                                    <h3>Kitchen Wall Tiles</h3>
+                                    <a href="wall-products.html?category=kitchen-tiles">Explore Now</a>
+                                </div>
                             </div>
-                            <div class="logo">
-                                <img src="./mediafiles/image/kitchen.png" alt="">
-                                <h3>Kitchen Wall Tiles</h3>
-                                <a href="404.html">Explore Now</a>
+                            <div class="tile-category">
+                                <div class="logo">
+                                    <img src="./mediafiles/image/interior-design.png" alt="">
+                                    <h3>Living Room Wall Tiles</h3>
+                                    <a href="wall-products.html?category=livingroom-tiles">Explore Now</a>
+                                </div>
+                                <div class="logo">
+                                    <img src="./mediafiles/image/house.png" alt="">
+                                    <h3>Outdoor Wall Tiles</h3>
+                                    <a href="wall-products.html?category=outdoor-tiles">Explore Now</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="tile-category">
-                            <div class="logo">
-                                <img src="./mediafiles/image/interior-design.png" alt="">
-                                <h3>Living Room Wall Tiles</h3>
-                                <a href="404.html">Explore Now</a>
+                            <div class="tile-category">
+                                <div class="logo">
+                                    <img src="./mediafiles/image/bedroom.png" alt="">
+                                    <h3>Bedroom Wall Tiles</h3>
+                                    <a href="wall-products.html?category=bedroom-tiles">Explore Now</a>
+                                </div>
+                                <div class="logo"></div>
                             </div>
-                            <div class="logo">
-                                <img src="./mediafiles/image/house.png" alt="">
-                                <h3>Outdoor Wall Tiles</h3>
-                                <a href="404.html">Explore Now</a>
+                            <div class="tile-category">
+                                <div class="logo"></div>
+                                <div class="logo"></div>
                             </div>
-                        </div>
-                        <div class="tile-category">
-                            <div class="logo">
-                                <img src="./mediafiles/image/bedroom.png" alt="">
-                                <h3>Bedroom Wall Tiles</h3>
-                                <a href="404.html">Explore Now</a>
-                            </div>
-                            <div class="logo"></div>
-                        </div>
-                        <div class="tile-category">
-                            <div class="logo"></div>
-                            <div class="logo"></div>
                         </div>
                     </div>
                 </div>
                 <div class="container lightBack">
-                    <div class="right-section scrollAble" style="margin-right: 20px;">
-                        <div class="tile-category">
-                            <div class="logo">
-                                <img src="./mediafiles/image/bathroom.png" alt="">
-                                <h3>Bathroom Floor Tiles</h3>
-                                <a href="404.html">Explore Now</a>
+                    <div class="combined">
+                        <div class="right-section scrollAble" style="margin-right: 20px;">
+                            <div class="tile-category">
+                                <div class="logo">
+                                    <img src="./mediafiles/image/bathroom.png" alt="">
+                                    <h3>Bathroom Floor Tiles</h3>
+                                    <a href="floor-products.html?category=bathroom-tiles">Explore Now</a>
+                                </div>
+                                <div class="logo">
+                                    <img src="./mediafiles/image/kitchen.png" alt="">
+                                    <h3>Kitchen Floor Tiles</h3>
+                                    <a href="floor-products.html?category=kitchen-tiles">Explore Now</a>
+                                </div>
                             </div>
-                            <div class="logo">
-                                <img src="./mediafiles/image/kitchen.png" alt="">
-                                <h3>Kitchen Floor Tiles</h3>
-                                <a href="404.html">Explore Now</a>
+                            <div class="tile-category">
+                                <div class="logo">
+                                    <img src="./mediafiles/image/interior-design.png" alt="">
+                                    <h3>Living Room Floor Tiles</h3>
+                                    <a href="floor-products.html?category=livingroom-tiles">Explore Now</a>
+                                </div>
+                                <div class="logo">
+                                    <img src="./mediafiles/image/house.png" alt="">
+                                    <h3>Outdoor Floor Tiles</h3>
+                                    <a href="floor-products.html?category=outdoor-tiles">Explore Now</a>
+                                </div>
+                            </div>
+                            <div class="tile-category">
+                                <div class="logo">
+                                    <img src="./mediafiles/image/bedroom.png" alt="">
+                                    <h3>Bedroom Floor Tiles</h3>
+                                    <a href="floor-products.html?category=bedroom-tiles">Explore Now</a>
+                                </div>
+                                <div class="logo"></div>
+                            </div>
+                            <div class="tile-category">
+                                <div class="logo"></div>
+                                <div class="logo"></div>
                             </div>
                         </div>
-                        <div class="tile-category">
-                            <div class="logo">
-                                <img src="./mediafiles/image/interior-design.png" alt="">
-                                <h3>Living Room Floor Tiles</h3>
-                                <a href="404.html">Explore Now</a>
+                        <div class="seperator">
+                            <div class="scrollBtns">
+                                <button class="scrollLeftBtn">1</button>
+                                <button class="scrollRightBtn">2</button>
                             </div>
-                            <div class="logo">
-                                <img src="./mediafiles/image/house.png" alt="">
-                                <h3>Outdoor Floor Tiles</h3>
-                                <a href="404.html">Explore Now</a>
+                            <hr class="divider">
+                            <div class="scrollBtns">
+                                <button class="scrollRightBtn"><i class="fas fa-angle-right"></i></button>
+                                <button class="scrollLeftBtn"><i class="fas fa-angle-left"></i></button>
                             </div>
-                        </div>
-                        <div class="tile-category">
-                            <div class="logo">
-                                <img src="./mediafiles/image/bedroom.png" alt="">
-                                <h3>Bedroom Floor Tiles</h3>
-                                <a href="404.html">Explore Now</a>
-                            </div>
-                            <div class="logo"></div>
-                        </div>
-                        <div class="tile-category">
-                            <div class="logo"></div>
-                            <div class="logo"></div>
-                        </div>
-                    </div>
-                    <div class="seperator">
-                        <div class="scrollBtns">
-                            <button class="scrollLeftBtn">1</button>
-                            <button class="scrollRightBtn">2</button>
-                        </div>
-                        <hr class="divider">
-                        <div class="scrollBtns">
-                            <button class="scrollRightBtn"><i class="fas fa-angle-right"></i></button>
-                            <button class="scrollLeftBtn"><i class="fas fa-angle-left"></i></button>
                         </div>
                     </div>
                     <div class="left-section marginAdj">
@@ -278,7 +246,7 @@
                             <img src="./mediafiles/image/floortiles.jpg" alt="Tile Image 1">
                         </div>
                         <div class="explore-button">
-                            <a href="404.html">EXPLORE ALL</a>
+                            <a href="floor-products.html?category=all-tiles">Explore All</a>
                         </div>
                     </div>
                 </div>
@@ -287,12 +255,12 @@
         <section class="section services" id="services">
             <div class="container">
                 <div class="heading">
-                    <h1>Our Services</h1>
+                    <h1 class="ourservicer">Our Services</h1>
                     <div class="data">
                         <div class="cards-container">
                             <div class="card designYourSpace">
                                 <h1>Design Your Dream Space</h1>
-                                <div class="card__content">
+                                <div class="card__content overflow">
                                     <p class="card__title">Design Your Dream Space</p>
                                     <div class="card__description">
                                         <p>Unleash your creativity with our customizable tiles!
@@ -378,7 +346,7 @@
                         </div>
                         <div class="faq-container">
                             <div class="heading">
-                                <h1>Why Choose Our Tiles?</h1>
+                                <h1 class="whychoose">Why Choose Our Tiles?</h1>
                             </div>
                             <div class="faqData">
                                 <ul>
@@ -764,7 +732,7 @@
                     </div>
                     <div class="contactFormRow">
                         <div class="input-fields">
-                            <input type="email" name="email" id="email" title="Your Email" required>
+                            <input type="email" name="email" id="email" title="Your Email" required autocomplete="on">
                             <label for="email">E-mail*</label>
                         </div>
                     </div>
@@ -855,7 +823,6 @@
             <p>&copy; 2024 all copyrights are reserved by Indica Piezo Optics</p>
         </section>
     </footer>
-    <script src="./js/chatbot.js"></script>
     <script src="./js/script.js"></script>
 </body>
 

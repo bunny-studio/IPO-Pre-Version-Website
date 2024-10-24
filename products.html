@@ -5,27 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./mediafiles/ipologo.png" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/caa13318f3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/products.css">
-    <title>Products | Indica Piezo Optics</title>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+    <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="./css/media-query.css">
+    <title>Wall Tile Products | Indica Piezo Optics</title>
 </head>
 
 <body>
     <button class="social-links">
-        <span>Connect with us</span>
+        <span class="socialText">Connect with us</span>
         <div class="container">
             <a href="mailto:contactsus.ipo@gmail.com" target="_blank" class="email">
                 <svg fill="#000000" height="30" width="30" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 75.294 75.294" xml:space="preserve">
                     <g>
-                        <path
-                            d="M66.097,12.089h-56.9C4.126,12.089,0,16.215,0,21.286v32.722c0,5.071,4.126,9.197,9.197,9.197h56.9
-                    		c5.071,0,9.197-4.126,9.197-9.197V21.287C75.295,16.215,71.169,12.089,66.097,12.089z M61.603,18.089L37.647,33.523L13.691,18.089
-                    		H61.603z M66.097,57.206h-56.9C7.434,57.206,6,55.771,6,54.009V21.457l29.796,19.16c0.04,0.025,0.083,0.042,0.124,0.065
-                    		c0.043,0.024,0.087,0.047,0.131,0.069c0.231,0.119,0.469,0.215,0.712,0.278c0.025,0.007,0.05,0.01,0.075,0.016
-                    		c0.267,0.063,0.537,0.102,0.807,0.102c0.001,0,0.002,0,0.002,0c0.002,0,0.003,0,0.004,0c0.27,0,0.54-0.038,0.807-0.102
-                    		c0.025-0.006,0.05-0.009,0.075-0.016c0.243-0.063,0.48-0.159,0.712-0.278c0.044-0.022,0.088-0.045,0.131-0.069
-                    		c0.041-0.023,0.084-0.04,0.124-0.065l29.796-19.16v32.551C69.295,55.771,67.86,57.206,66.097,57.206z" />
+                        <path d="M66.097,12.089h-56.9C4.126,12.089,0,16.215,0,21.286v32.722c0,5.071,4.126,9.197,9.197,9.197h56.9
+                		c5.071,0,9.197-4.126,9.197-9.197V21.287C75.295,16.215,71.169,12.089,66.097,12.089z M61.603,18.089L37.647,33.523L13.691,18.089
+                		H61.603z M66.097,57.206h-56.9C7.434,57.206,6,55.771,6,54.009V21.457l29.796,19.16c0.04,0.025,0.083,0.042,0.124,0.065
+                		c0.043,0.024,0.087,0.047,0.131,0.069c0.231,0.119,0.469,0.215,0.712,0.278c0.025,0.007,0.05,0.01,0.075,0.016
+                		c0.267,0.063,0.537,0.102,0.807,0.102c0.001,0,0.002,0,0.002,0c0.002,0,0.003,0,0.004,0c0.27,0,0.54-0.038,0.807-0.102
+                		c0.025-0.006,0.05-0.009,0.075-0.016c0.243-0.063,0.48-0.159,0.712-0.278c0.044-0.022,0.088-0.045,0.131-0.069
+                		c0.041-0.023,0.084-0.04,0.124-0.065l29.796-19.16v32.551C69.295,55.771,67.86,57.206,66.097,57.206z" />
                     </g>
                 </svg>
             </a>
@@ -62,221 +62,165 @@
                 </a>
             </div>
 
-            <ul class="navLinks">
+            <input type="checkbox" id="click">
+            <label for="click" class="menu-bar">
+                <i class="fas fa-bars-staggered" id="navBtn" aria-hidden="true" style="display: block;"></i>
+                <i class="fas fa-xmark" id="navBtnClose" aria-hidden="true" style="display: none;"></i>
+            </label>
+
+            <ul class="navLinks" id="sideMenu">
                 <li>
-                    <a href="index.html#home" class="unactive"><i class="fas fa-house"></i>HOME</a>
+                    <a href="index.html#home" class="unactive active"><i class="far fa-house"></i>HOME</a>
                 </li>
                 <li>
-                    <a href="index.html#products" class="unactive active"><i
-                            class="fab fa-product-hunt"></i>PRODUCTS</a>
+                    <a href="index.html#products" class="unactive"><i class="fab fa-product-hunt"></i>PRODUCTS</a>
                 </li>
                 <li>
-                    <a href="index.html#services" class="unactive"><i class="fas fa-users-gear"></i>SERVICES</a>
+                    <a href="index.html#services" class="unactive"><i class="far fa-users-gear"></i>SERVICES</a>
                 </li>
                 <li>
-                    <a href="index.html#about" class="unactive"><i class="fas fa-circle-info"></i>ABOUT</a>
+                    <a href="index.html#about" class="unactive"><i class="far fa-circle-info"></i>ABOUT</a>
                 </li>
                 <li>
-                    <a href="index.html#contact" class="unactive"><i class="fas fa-phone"></i>CONTACT</a>
-                </li>
-                <li>
-                    <a href="#search" class="unactive" id="searchBtns"><i class="fas fa-magnifying-glass"></i></a>
+                    <a href="index.html#contact" class="unactive"><i class="far fa-phone"></i>CONTACT</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
+        <div class="topupBtn-container" onclick="topFunction()" id="topupBtn">
+            <span><i class="fas fa-arrow-up"></i></span>
+        </div>
         <div class="ProductContainer">
             <div class="ProductHeading">
-                <h1 class="ProductTitle">Wall Tiles</h1>
-                <hr class="seperators">
+                <span class="ProductTitle">Bedroom Wall Tile Product</span>
             </div>
+            <hr class="seperators">
             <div class="notice">
-                <p>This section of our website is not fully completed! There are so many changes are going to be
-                    happened in this.</p>
-                <p>This section of our website is not fully completed! There are so many changes are going to be
-                    happened in this.</p>
-                <p>This section of our website is not fully completed! There are so many changes are going to be
-                    happened in this.</p>
+                <p>Please note that the products displayed on this website are not real. We will publish actual products
+                    once we begin
+                    manufacturing.</p>
+                <p>Please note that the products displayed on this website are not real. We will publish actual products
+                    once we begin
+                    manufacturing.</p>
+                <p>Please note that the products displayed on this website are not real. We will publish actual products
+                    once we begin
+                    manufacturing.</p>
             </div>
-            <div class="main-container">
-                <div class="containerContent">
-
-                    <div class="no-results-message">
-                        <img id="noResultsImage"
-                            src="https://content.dmart.in/website/_next/static/media/empty-search-results.354500b5.svg"
-                            alt="No results found" style="width: 150px; display: block; margin: 0 auto;" />
-                        <p id="noResultsText" style="color: red; text-align: center; margin-top: 10px;">Sorry,
-                            Configuration not found</p>
-                    </div>
-
-                    <!-- <div class="content-wrapper"> -->
-                    <div class="tile">
-                        <a href="404.html" class="pd_name">
-                            <img src="https://www.kajariaceramics.com/product-picture/SPW01326_b.jpg"
-                                alt="Agate Decor Polished">
-                            <p>Agate Decor Polished</p>
-                            <p>30x20 cm</p>
-                            <p>Polished</p>
-                        </a>
-                    </div>
-                    <div class="tile">
-                        <a href="404.html" class="pd_name">
-                            <img src="https://www.kajariaceramics.com/product-picture/PW03802_b.jpg"
-                                alt="Agate Decor Polished">
-                            <p>Agate Decor Polished</p>
-                            <p>80x160 cm</p>
-                            <p>Polished</p>
-                        </a>
-                    </div>
-                    <div class="tile">
-                        <a href="404.html" class="pd_name">
-                            <img src="https://www.kajariaceramics.com/product-picture/PW03997_b.jpg"
-                                alt="Alexandria Dark">
-                            <p>Alexandria Dark</p>
-                            <p>30x45 cm</p>
-                            <p>Matt</p>
-                        </a>
-                    </div>
-                    <!-- Repeat similar blocks for all other tiles -->
-                    <div class="tile">
-                        <a href="404.html" class="pd_name">
-                            <img src="https://www.kajariaceramics.com/product-picture/SPW01326_b.jpg"
-                                alt="Agate Decor Polished">
-                            <p>Agate Decor Polished</p>
-                            <p>30x20 cm</p>
-                            <p>Polished</p>
-                        </a>
-                    </div>
-                    <div class="tile">
-                        <a href="404.html" class="pd_name">
-                            <img src="https://www.kajariaceramics.com/product-picture/PW03802_b.jpg"
-                                alt="Agate Decor Polished">
-                            <p>Agate Decor Polished</p>
-                            <p>80x160 cm</p>
-                            <p>Polished</p>
-                        </a>
-                    </div>
-                    <div class="tile">
-                        <a href="404.html" class="pd_name">
-                            <img src="https://www.kajariaceramics.com/product-picture/PW03997_b.jpg"
-                                alt="Alexandria Dark">
-                            <p>Alexandria Dark</p>
-                            <p>30x45 cm</p>
-                            <p>Matt</p>
-                        </a>
-                    </div>
-
-                    <div class="tile">
-                        <a href="404.html" class="pd_name">
-                            <img src="https://www.kajariaceramics.com/product-picture/SPW01326_b.jpg"
-                                alt="Agate Decor Polished">
-                            <p>Agate Decor Polished</p>
-                            <p>30x20 cm</p>
-                            <p>Polished</p>
-                        </a>
-                    </div>
-                    <div class="tile">
-                        <a href="404.html" class="pd_name">
-                            <img src="https://www.kajariaceramics.com/product-picture/PW03802_b.jpg"
-                                alt="Agate Decor Polished">
-                            <p>Agate Decor Polished</p>
-                            <p>80x160 cm</p>
-                            <p>Polished</p>
-                        </a>
-                    </div>
-                    <div class="tile">
-                        <a href="404.html" class="pd_name">
-                            <img src="https://www.kajariaceramics.com/product-picture/PW03997_b.jpg"
-                                alt="Alexandria Dark">
-                            <p>Alexandria Dark</p>
-                            <p>30x45 cm</p>
-                            <p>Matt</p>
-                        </a>
-                    </div>
-
-                    <div class="tile">
-                        <a href="404.html" class="pd_name">
-                            <img src="https://www.kajariaceramics.com/product-picture/SPW01326_b.jpg"
-                                alt="Agate Decor Polished">
-                            <p>Agate Decor Polished</p>
-                            <p>30x20 cm</p>
-                            <p>Polished</p>
-                        </a>
-                    </div>
-                    <div class="tile">
-                        <a href="404.html" class="pd_name">
-                            <img src="https://www.kajariaceramics.com/product-picture/PW03802_b.jpg"
-                                alt="Agate Decor Polished">
-                            <p>Agate Decor Polished</p>
-                            <p>80x160 cm</p>
-                            <p>Polished</p>
-                        </a>
-                    </div>
-                    <div class="tile">
-                        <a href="404.html" class="pd_name">
-                            <img src="https://www.kajariaceramics.com/product-picture/PW03997_b.jpg"
-                                alt="Alexandria Dark">
-                            <p>Alexandria Dark</p>
-                            <p>30x45 cm</p>
-                            <p>Matt</p>
-                        </a>
+        </div>
+        <div class="product-container">
+            <div class="product-image">
+                <div class="image-container">
+                    <img src="./mediafiles/tile/wall/living room tiles//core/core.jpg" alt="">
+                </div>
+            </div>
+            <div class="product-details">
+                <div class="product-name">
+                    <h2>Core Tile v1</h2>
+                </div>
+                <div class="product-description">
+                    <p>Product Description</p>
+                    <p class="details">Not Available</p>
+                </div>
+                <div class="productBtn">
+                    <a href="#wheretobuy" id="whereTobuy"><i class="far fa-location-dot"></i> Where to Buy</a>
+                    <div class="timer">
+                        <span>Location hides in (seconds)</span>
+                        <span id="seconds">30</span>
                     </div>
                 </div>
-
-                <div class="filter-container">
-                    <div class="row1">
-                        <span class="filter-button">Filter</span>
-                        <button class="apply-button">APPLY</button>
-                    </div>
-                    <div class="filter-category">
-                        <h3>By Category</h3>
-                        <label><input type="checkbox" /> Ceramic Tiles</label><br>
-                        <label><input type="checkbox" /> Eternity - Glazed Vitrified Tiles</label><br>
-                        <label><input type="checkbox" /> Polished Vitrified Tiles</label><br>
-                        <label><input type="checkbox" /> Grestough Tiles</label><br>
-                    </div>
-
-                    <div class="filter-size">
-                        <h3>By Size</h3>
-                        <label><input type="checkbox" /> 80x160 cm</label><br>
-                        <label><input type="checkbox" /> 60x120 cm</label><br>
-                        <label><input type="checkbox" /> 30x60 cm</label><br>
-                        <label><input type="checkbox" /> 30x45 cm</label><br>
-                        <label><input type="checkbox" /> 15x60 cm</label><br>
-                        <label><input type="checkbox" /> 30x20 cm</label><br>
-                    </div>
-
-                    <div class="filter-finish">
-                        <h3>By Finish</h3>
-                        <label><input type="checkbox" /> Polish | Glitz Matt</label><br>
-                        <label><input type="checkbox" /> Matt</label><br>
-                        <label><input type="checkbox" /> Beyond</label><br>
-                        <label><input type="checkbox" /> Polished</label><br>
-                        <label><input type="checkbox" /> Carving</label><br>
-                        <label><input type="checkbox" /> Sparkle</label><br>
-                        <label><input type="checkbox" /> Rustic Matt</label><br>
-                        <label><input type="checkbox" /> Decor Matt</label><br>
-                        <label><input type="checkbox" /> Hard Matt</label><br>
-                        <label><input type="checkbox" /> Elevation Matt</label><br>
-                        <label><input type="checkbox" /> Matt/Punch</label><br>
-                        <label><input type="checkbox" /> Metalic</label><br>
-                        <label><input type="checkbox" /> Rustic-Matt</label><br>
-                        <label><input type="checkbox" /> Hd Stone</label><br>
-                        <label><input type="checkbox" /> Matt | Punch</label><br>
-                        <label><input type="checkbox" /> Decor Matt</label><br>
-                    </div>
+                <div class="location" id="location">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4433.037597301138!2d75.716551!3d26.9629653!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db3002ca32963%3A0x3930855de7fa4819!2sIndica%20Piezo%20Optics%20Private%20Limited!5e1!3m2!1sen!2sin!4v1729603244934!5m2!1sen!2sin"
+                        width="650" height="325" style="padding: 0 20px; border-radius: 20px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="topicHeading">
+                <h1>Compare with similar items</h1>
+            </div>
+            <div class="row">
+                <div class="card-wrapper">
+                    <a href="#">
+                        <div class="card-container">
+                            <div class="card-image">
+                                <img src="./mediafiles/tile/wall/bedroom/leaf/leaf 1.jpg" alt="Bedroom Tile - Leaf-1"
+                                    loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <h1>Leaf Tile v1</h1>
+                                <a href="404.html" class="quickViewBtn">Quick View</a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-wrapper">
+                    <a href="#">
+                        <div class="card-container">
+                            <div class="card-image">
+                                <img src="./mediafiles/tile/wall/bedroom/leaf/leaf 2.jpg" alt="Bedroom Tile - Leaf-2"
+                                    loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <h1>Leaf Tile v2</h1>
+                                <a href="404.html" class="quickViewBtn">Quick View</a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-wrapper">
+                    <a href="#">
+                        <div class="card-container">
+                            <div class="card-image">
+                                <img src="./mediafiles/tile/wall/bedroom/leaf/leaf 3.jpg" alt="Bedroom Tile - Leaf-3"
+                                    loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <h1>Leaf Tile v3</h1>
+                                <a href="404.html" class="quickViewBtn">Quick View</a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-wrapper">
+                    <a href="#">
+                        <div class="card-container">
+                            <div class="card-image">
+                                <img src="./mediafiles/tile/wall/bedroom/leaf/leaf 4.jpg" alt="Bedroom Tile - Texture-4"
+                                    loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <h1>Texture Tile v4</h1>
+                                <a href="404.html" class="quickViewBtn">Quick View</a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-wrapper">
+                    <a href="#">
+                        <div class="card-container">
+                            <div class="card-image">
+                                <img src="./mediafiles/tile/wall/bedroom/leaf/leaf 5.jpg" alt="Bedroom Tile - Leaf-5"
+                                    loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <h1>Texture Tile v5</h1>
+                                <a href="404.html" class="quickViewBtn">Quick View</a>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </main>
-
     <footer>
         <section class="section">
             <p>&copy; 2024 all copyrights are reserved by Indica Piezo Optics</p>
         </section>
     </footer>
-    <script src="./js/productsFilter.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
